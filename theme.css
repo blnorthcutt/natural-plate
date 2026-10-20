@@ -1,0 +1,79 @@
+/* ============================================================================
+   theme.css — The Natural Plate theme for Ivy + Lattice
+   ============================================================================
+   Follows the Ivy two-tier token system: only override -light/-dark variant
+   tokens on :root, NEVER the applied tokens directly.
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     LIGHT palette
+     ---------------------------------------------------------------------- */
+  --color-primary-light:        #4a7c59;  /* sage green */
+  --color-primary-text-light:   #ffffff;
+  --color-secondary-light:      #c49a6c;  /* warm tan */
+  --color-secondary-text-light: #2c2a26;
+  --color-link-light:           #4a7c59;
+  --color-muted-light:          #7a756b;
+  --color-border-light:         #e2ddd4;
+  --color-surface-light:        #ffffff;
+  --surface-2-light:            #f0ede6;
+  --surface-3-light:            #e8e4dc;
+  --color-bg-light:             #f7f5f0;  /* warm off-white */
+  --color-text-light:           #2c2a26;
+
+  /* ------------------------------------------------------------------------
+     DARK palette
+     ---------------------------------------------------------------------- */
+  --color-primary-dark:         #6b8f6e;  /* muted sage green */
+  --color-primary-text-dark:    #1a1815;
+  --color-secondary-dark:       #c49a6c;
+  --color-secondary-text-dark:  #1a1815;
+  --color-link-dark:            #6b8f6e;
+  --color-muted-dark:           #a39e94;
+  --color-border-dark:          #3a3732;
+  --color-surface-dark:         #23211d;
+  --surface-2-dark:             #2a2823;
+  --surface-3-dark:             #32302a;
+  --color-bg-dark:              #1a1815;
+  --color-text-dark:            #e8e4dd;
+
+  /* ------------------------------------------------------------------------
+     Semantic status colors
+     ---------------------------------------------------------------------- */
+  --info:    #60a5fa;
+  --success: #4a7c59;
+  --warn:    #c49a6c;
+  --danger:  #c94a4a;
+
+  /* ------------------------------------------------------------------------
+     Type / rhythm tweaks
+     ---------------------------------------------------------------------- */
+  --lh: 1.65;
+  --measure: 60rem;
+  --radius: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Sticky header + anchor offset
+   ------------------------------------------------------------------------ */
+header[role="banner"] {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in oklab, var(--color-bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Dark-mode toggle styling
+   ------------------------------------------------------------------------ */
+dark-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

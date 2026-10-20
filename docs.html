@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural Eating Guide — The Natural Plate</title>
+  <meta name="description" content="The complete Natural Eating guide — an evidence-informed synthesis of macrobiotic wisdom and modern nutrition science.">
+
+  <!-- PREPAINT SCRIPT -->
+  <script>
+  (() => {
+    const KEY = 'dm:theme';
+    const root = document.documentElement;
+    const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+    let mode;
+    try { mode = localStorage.getItem(KEY); } catch {}
+    if (!mode) mode = (root.getAttribute('data-theme')==='dark'||root.classList.contains('dark'))?'dark':null;
+    if (!mode) mode = prefersDark ? 'dark' : 'light';
+    root.style.colorScheme = mode;
+    if (mode === 'dark') root.setAttribute('data-theme','dark');
+  })();
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rlnorthcutt/ivy/dist/ivy.full.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rlnorthcutt/lattice/dist/lattice.full.min.css">
+  <link rel="stylesheet" href="./theme.css">
+  <link rel="stylesheet" href="./site.css">
+</head>
+<body class="lattice">
+
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header role="banner">
+    <div class="container d-flex items-center justify-between gap-3">
+      <a href="./" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--color-text);font-weight:600;letter-spacing:-.01em">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary);flex:none">
+          <path d="M12 2c-4.5 0-8 3.5-8 8 0 4.5 3.5 8 8 8s8-3.5 8-8c0-4.5-3.5-8-8-8z"/>
+          <path d="M12 2v18M12 20c-2 0-4 2-4 4h8c0-2-2-4-4-4z"/>
+        </svg>
+        <span>The Natural Plate</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="./app.html">App</a></li>
+          <li><a href="./docs.html" aria-current="page">Guide</a></li>
+          <li><dark-mode-toggle></dark-mode-toggle></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+
+    <section class="page-title container" aria-labelledby="page-title">
+      <p class="kicker">Documentation</p>
+      <h1 id="page-title">Natural Eating Guide</h1>
+      <p class="lede">A modern, evidence-informed guide to eating as a skill — not a rulebook. A synthesis of macrobiotic wisdom, whole-food plant-based nutrition, and the science of preventing and reversing chronic disease.</p>
+    </section>
+
+    <div class="container grid gap-5">
+
+      <!-- SIDEBAR TOC -->
+      <aside class="span lg-span-3" aria-label="On this page">
+        <nav class="sticky-nav" style="position:sticky;top:5.5rem;">
+          <p class="muted" style="font-weight:600;margin-bottom:.5rem;">On this page</p>
+          <ul>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#principles">2. The Five Principles</a></li>
+            <li><a href="#the-plate">3. The Plate</a></li>
+            <li><a href="#seasons">4. Eating with the Seasons</a></li>
+            <li><a href="#condition">5. Eating for Your Condition</a></li>
+            <li><a href="#science">6. The Science</a></li>
+            <li><a href="#body-wisdom">7. Building Body Wisdom</a></li>
+            <li><a href="#safety">8. Safety &amp; Supplementation</a></li>
+            <li><a href="#onramp">9. 90-Day On-Ramp</a></li>
+            <li><a href="#appendix">10. Appendix</a></li>
+            <li><a href="#closing">Closing Thoughts</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- ARTICLE -->
+      <article class="span lg-span-9">
+
+        <section id="introduction" aria-labelledby="introduction-title">
+          <h2 id="introduction-title">1. Introduction: Why a Modern Natural Eating Framework</h2>
+          <p>For most of us, eating is something that happens <em>to</em> us rather than something we <em>do</em>. We eat what is convenient, what is advertised, what we were raised on, what is cheapest, or what our mood dictates in the moment. We have outsourced the most frequent decision we make — roughly 200 food choices a day, by some estimates — to habit, craving, and the food industry. The result is visible in the statistics: heart disease, type 2 diabetes, and many cancers are now so common that we treat them as inevitable facts of aging rather than what they often are — largely preventable, and in some cases reversible, consequences of decades of daily choices.</p>
+          <p>This guide offers a different way. It is built on a simple but powerful premise:</p>
+          <div class="callout" data-tone="info">
+            <p><strong>Eating is a skill you develop, not a rulebook you follow.</strong></p>
+          </div>
+          <p>That sentence is the organizing philosophy of everything that follows. It comes from a synthesis of three traditions of thought that, on the surface, look very different but actually agree on the essentials.</p>
+
+          <h3>What we keep from macrobiotics</h3>
+          <p>Macrobiotics began in the early 20th century with the Japanese philosopher George Ohsawa and was popularized and refined in the West by Michio Kushi. The word itself comes from Greek — <em>macro</em> (great, large) and <em>bios</em> (life) — meaning "the great life" or "long life." At its best, macrobiotics is not a diet at all but a way of living in harmony with nature, and its dietary core contains genuinely useful, durable ideas:</p>
+          <ul>
+            <li><strong>Seasonal eating.</strong> Eating what grows in your climate at the time of year it grows.</li>
+            <li><strong>Whole foods.</strong> Grains, beans, and vegetables in their whole, minimally processed forms.</li>
+            <li><strong>Balance as a heuristic.</strong> A tool for variety and moderation.</li>
+            <li><strong>Eating according to condition.</strong> Adjusting based on how you feel.</li>
+            <li><strong>Chewing and mindful eating.</strong> Eating slowly, with attention.</li>
+            <li><strong>Local food.</strong> Eating from your own region.</li>
+          </ul>
+
+          <h3>What we discard from macrobiotics</h3>
+          <ul>
+            <li>The "brown rice cure" and extreme grain-only diets.</li>
+            <li>Anti-scientific cancer claims.</li>
+            <li>Rigid rules and fear-based restrictions.</li>
+            <li>The metaphysical baggage (yin-yang cosmology).</li>
+            <li>The moralism — no purity, no guilt.</li>
+          </ul>
+
+          <h3>What science adds</h3>
+          <p>The third pillar is the modern scientific literature on nutrition and chronic disease. Whole-food plant-based (WFPB) patterns are associated with the lowest rates of heart disease, type 2 diabetes, and several cancers. The Mediterranean and DASH diets — plant-forward — have the strongest evidence for cardiovascular and cognitive health.</p>
+          <p><strong>This guide is educational, not medical advice.</strong> If you are on medication, have a diagnosed condition, are pregnant, or have a history of disordered eating, please read Section 8 carefully and work with your healthcare team.</p>
+        </section>
+
+        <section id="principles" aria-labelledby="principles-title">
+          <h2 id="principles-title">2. The Five Principles of Natural Eating</h2>
+          <p>The whole framework reduces to five principles, remembered as <strong>W-S-C-B-M</strong>.</p>
+
+          <h3>Principle 1: Whole</h3>
+          <p>Eat foods close to their natural state. Whole grains, legumes, vegetables, fruits, nuts, and seeds. Minimize processing, refining, and fractionation.</p>
+          <blockquote><strong>The question to ask:</strong> <em>Is this food closer to how it grows in nature, or has it been processed into something else?</em></blockquote>
+
+          <h3>Principle 2: Seasonal</h3>
+          <p>Eat with the seasons of your place. In summer, favor light, cooling foods — salads, fruit, cucumbers. In winter, favor dense, warming foods — root vegetables, stews, soups.</p>
+          <blockquote><strong>The question to ask:</strong> <em>What is growing right now, where I live?</em></blockquote>
+
+          <h3>Principle 3: Conditional</h3>
+          <p>Eat according to your condition — how you feel, what your body is doing, and what it needs today.</p>
+          <blockquote><strong>The question to ask:</strong> <em>What does my body need right now, given how I feel and what I'm doing?</em></blockquote>
+
+          <h3>Principle 4: Balanced / Variety</h3>
+          <p>Balance is a practice of variety and moderation, not a precise formula. Aim for a wide range of whole plant foods across the day and week.</p>
+          <blockquote><strong>The question to ask:</strong> <em>Am I eating a wide variety of whole plant foods, or am I stuck in a rut?</em></blockquote>
+
+          <h3>Principle 5: Mindful</h3>
+          <p>Eat with attention and gratitude. Chew thoroughly. Put the phone down. Notice the food and your body.</p>
+          <blockquote><strong>The question to ask:</strong> <em>Am I actually present for this meal, and am I listening to my body while I eat?</em></blockquote>
+        </section>
+
+        <section id="the-plate" aria-labelledby="the-plate-title">
+          <h2 id="the-plate-title">3. The Plate: What a Natural Meal Looks Like</h2>
+          <p>A natural meal is built on proportions, not prohibitions. The plate is a practical template, not a law.</p>
+
+          <h3>The natural plate</h3>
+          <p>For a typical adult meal, imagine your plate divided roughly as follows:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Portion</th>
+                <th>Food group</th>
+                <th>Examples</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>~½</strong></td>
+                <td>Vegetables (and some fruit)</td>
+                <td>Leafy greens, cruciferous veg, root veg, peppers, tomatoes, berries</td>
+                <td>Fiber, micronutrients, phytonutrients, volume</td>
+              </tr>
+              <tr>
+                <td><strong>~¼</strong></td>
+                <td>Whole grains and/or starchy vegetables</td>
+                <td>Brown rice, oats, quinoa, barley, sweet potato, corn</td>
+                <td>Sustained energy, fiber, B vitamins</td>
+              </tr>
+              <tr>
+                <td><strong>~¼</strong></td>
+                <td>Legumes and/or soy</td>
+                <td>Lentils, chickpeas, black beans, tofu, tempeh</td>
+                <td>Protein, fiber, iron, zinc</td>
+              </tr>
+              <tr>
+                <td><strong>A handful</strong></td>
+                <td>Nuts, seeds, healthy fats</td>
+                <td>Walnuts, almonds, flax, chia, avocado, olive oil</td>
+                <td>Essential fats, satiety</td>
+              </tr>
+              <tr>
+                <td><strong>To taste</strong></td>
+                <td>Herbs, spices, aromatics</td>
+                <td>Garlic, ginger, turmeric, basil, cumin, lemon, vinegar</td>
+                <td>Flavor, phytonutrients, pleasure</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>This is a <em>plant-forward</em> template. It can be 100% plant-based (WFPB), or it can be plant-forward with small amounts of animal foods.</p>
+
+          <h3>Sample meals by season</h3>
+          <p><strong>Spring:</strong> Overnight oats with strawberries and chia. Big salad with spring greens, chickpeas, and lemon-tahini dressing. Asparagus and pea risotto.</p>
+          <p><strong>Summer:</strong> Smoothie bowl with berries and hemp seeds. Chilled cucumber soup with quinoa salad. Black bean tacos with cabbage slaw.</p>
+          <p><strong>Autumn:</strong> Warm spiced oatmeal with apple and pumpkin seeds. Roasted butternut squash and lentil soup. Sweet potato and black bean chili.</p>
+          <p><strong>Winter:</strong> Savory oat porridge with greens and tofu scramble. Hearty minestrone. Root vegetable and chickpea stew.</p>
+        </section>
+
+        <section id="seasons" aria-labelledby="seasons-title">
+          <h2 id="seasons-title">4. Eating with the Seasons</h2>
+          <p>Seasonal eating does three things at once: improves freshness, flavor, and nutrient content; reduces cost and environmental footprint; and naturally rotates your diet.</p>
+
+          <h3>Warming and cooling as a felt-sense heuristic</h3>
+          <ul>
+            <li><strong>Cooling foods:</strong> most raw vegetables, leafy greens, cucumber, melon, berries, citrus, mint, coconut, tofu, mung beans.</li>
+            <li><strong>Neutral foods:</strong> most whole grains, most legumes, potatoes, carrots, cabbage, apples.</li>
+            <li><strong>Warming foods:</strong> ginger, garlic, onion, chili, cinnamon, cumin, root vegetables, oats, buckwheat, miso, winter squash.</li>
+          </ul>
+
+          <h3>Seasonal produce table (temperate Northern hemisphere)</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Season</th>
+                <th>Vegetables</th>
+                <th>Fruits</th>
+                <th>Herbs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Spring</strong></td>
+                <td>Asparagus, artichokes, peas, radishes, spring greens, spinach, new potatoes, scallions</td>
+                <td>Strawberries, rhubarb, early cherries, apricots</td>
+                <td>Mint, chives, parsley, dill</td>
+              </tr>
+              <tr>
+                <td><strong>Summer</strong></td>
+                <td>Tomatoes, zucchini, peppers, eggplant, corn, green beans, cucumbers, summer squash</td>
+                <td>Berries, peaches, nectarines, melon, plums, cherries, figs</td>
+                <td>Basil, cilantro, oregano, thyme</td>
+              </tr>
+              <tr>
+                <td><strong>Autumn</strong></td>
+                <td>Squash, pumpkin, sweet potato, kale, Brussels sprouts, cabbage, leeks, parsnips</td>
+                <td>Apples, pears, grapes, pomegranates, cranberries</td>
+                <td>Sage, rosemary, tarragon</td>
+              </tr>
+              <tr>
+                <td><strong>Winter</strong></td>
+                <td>Root vegetables, potatoes, onions, garlic, cabbage, kale, leeks, winter squash</td>
+                <td>Citrus, pears, apples (storage)</td>
+                <td>Parsley, bay, dried herbs</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Practical seasonal habits</h3>
+          <ul>
+            <li>Shop the farmers' market or CSA.</li>
+            <li>Freeze and preserve the surplus.</li>
+            <li>Let the method match the season — grill in summer, braise in winter.</li>
+            <li>Drink with the season — cold water in summer, warm ginger tea in winter.</li>
+          </ul>
+        </section>
+
+        <section id="condition" aria-labelledby="condition-title">
+          <h2 id="condition-title">5. Eating for Your Condition</h2>
+          <p>The conditional principle is where natural eating becomes genuinely sophisticated. Fixed meal plans fail because your body is not a fixed machine.</p>
+
+          <h3>Acute illness</h3>
+          <p>Prioritize fluids. Eat light and easily digested: soups, broths, congee, steamed vegetables, bananas. Reduce heavy fats and alcohol. Listen to appetite.</p>
+
+          <h3>Stress and high-pressure periods</h3>
+          <p>Steady, grounding meals. Prioritize whole grains, legumes, and cooked vegetables. Protect breakfast. Limit caffeine and alcohol. Keep it simple. Don't skip meals.</p>
+
+          <h3>Low energy and fatigue</h3>
+          <p>Check sleep, hydration, and iron status. Eat enough. Stable blood sugar — pair carbohydrate with fiber, protein, and fat. Iron-rich plant foods with vitamin C. B12 if plant-based.</p>
+
+          <h3>Recovery</h3>
+          <p>Nutrient-dense foods rich in protein, zinc, iron, and vitamins. Adequate protein at most meals. Plenty of fluids and gentle fiber. Be patient and consistent.</p>
+
+          <h3>Heavy training and athletic days</h3>
+          <p>Eat more. Carbohydrate is fuel. Don't forget protein and iron. Hydrate and replace electrolytes.</p>
+
+          <h3>Sedentary days</h3>
+          <p>Eat a bit less, especially less refined carbohydrate. Keep vegetables and fiber high. Don't graze out of boredom.</p>
+
+          <h3>Travel and disrupted routines</h3>
+          <p>Plan a portable toolkit: nuts, seeds, dried fruit, nut butter. Seek out real food when eating out. Accept imperfection.</p>
+
+          <h3>Digestive reset ideas</h3>
+          <p>1-3 days of simple, whole, lightly cooked meals: congee, steamed vegetables, lentils, miso soup. Reduce alcohol, fried food, and processed food. Chew thoroughly. Move gently.</p>
+        </section>
+
+        <section id="science" aria-labelledby="science-title">
+          <h2 id="science-title">6. The Science: Reversing Chronic Disease</h2>
+          <p>The unifying finding: <strong>the same dietary and lifestyle pattern that prevents chronic disease can, in many cases, slow, halt, or even reverse it.</strong></p>
+
+          <h3>6.1 Heart Disease</h3>
+          <p><strong>Key studies:</strong> The Ornish Lifestyle Heart Trial showed that a low-fat, whole-foods, plant-based diet could reverse coronary atherosclerosis. The Esselstyn studies showed disease progression halted. The PREDIMED trial found the Mediterranean diet reduced major cardiovascular events by ~30%. The DASH diet significantly lowered blood pressure.</p>
+          <p><strong>Mechanisms:</strong> Lowering LDL cholesterol and apoB, lowering blood pressure, reducing inflammation and oxidative stress, weight and metabolic improvement.</p>
+          <p><strong>Target numbers</strong> (discuss with your clinician): LDL &lt; 100 mg/dL, Blood pressure &lt; 120/80 mmHg.</p>
+
+          <h3>6.2 Type 2 Diabetes</h3>
+          <p><strong>Key studies:</strong> Barnard's trials showed a low-fat plant-based diet improved glycemic control. The DiRECT trial showed remission of type 2 diabetes in nearly half of participants at one year.</p>
+          <p><strong>Mechanisms:</strong> Reducing intramyocellular and intrahepatic fat, fiber slowing glucose absorption, lower glycemic load, weight loss, exercise.</p>
+          <p><strong>Target numbers:</strong> HbA1c &lt; 5.7% normal, Fasting glucose &lt; 100 mg/dL.</p>
+
+          <h3>6.3 Alzheimer's Disease and Cognitive Decline</h3>
+          <p><strong>Key concepts:</strong> The MIND diet — hybrid of Mediterranean and DASH — emphasizes green leafy vegetables, berries, nuts, beans, whole grains, and limits red meat, butter, and fried food. Higher MIND diet scores were associated with significantly slower cognitive decline. The "type 3 diabetes" hypothesis links insulin resistance in the brain to Alzheimer's pathology.</p>
+          <p><strong>Brain health package:</strong> MIND/Mediterranean pattern, metabolic control, exercise, sleep, social connection, B12 and vitamin D adequacy.</p>
+
+          <h3>6.4 Cancer Risk Reduction</h3>
+          <p><strong>WCRF/AICR recommendations:</strong> Be a healthy weight, be physically active, eat a diet rich in whole grains/vegetables/fruit/beans, limit fast foods, limit red and processed meat, limit sugar-sweetened drinks, limit alcohol, don't use supplements for cancer prevention.</p>
+
+          <h3>6.5 Kidney Health and the Gut Microbiome</h3>
+          <p>Plant-forward patterns support kidney health through lower sodium and processed food. People with chronic kidney disease need medical supervision. For the microbiome, fiber is the single most important dietary determinant — it feeds beneficial bacteria that produce anti-inflammatory short-chain fatty acids.</p>
+        </section>
+
+        <section id="body-wisdom" aria-labelledby="body-wisdom-title">
+          <h2 id="body-wisdom-title">7. Building Body Wisdom</h2>
+          <p>The heart of natural eating is a skill: the ability to observe your own body, learn from it, and adjust.</p>
+
+          <h3>The food-mood journal</h3>
+          <p>Keep a simple daily log for the first few weeks. Track meals, hunger, satiety, energy, digestion, mood, sleep, and activity. Review weekly to find patterns.</p>
+
+          <h3>Running personal "n=1 experiments"</h3>
+          <ol>
+            <li>Choose one variable.</li>
+            <li>Define the outcome in advance.</li>
+            <li>Run a baseline (3-7 days).</li>
+            <li>Apply the change (1-4 weeks).</li>
+            <li>Compare and decide.</li>
+            <li>Repeat with the next variable.</li>
+          </ol>
+
+          <h3>Tracking biomarkers</h3>
+          <p>Key markers worth tracking: lipid panel, apoB, HbA1c, fasting glucose, fasting insulin/HOMA-IR, hs-CRP, blood pressure, B12, ferritin, vitamin D, TSH/thyroid, kidney function. Get a baseline before making major changes.</p>
+
+          <h3>The quarterly review</h3>
+          <p>Every three months: re-read your journal patterns, recheck bloodwork, revisit the five principles, set one new skill goal, celebrate progress.</p>
+        </section>
+
+        <section id="safety" aria-labelledby="safety-title">
+          <h2 id="safety-title">8. Safety &amp; Supplementation</h2>
+
+          <h3>Non-negotiable: B12</h3>
+          <div class="callout" data-tone="warn">
+            <p><strong>Vitamin B12 is not found in plant foods in reliable amounts.</strong> On any plant-based diet, B12 supplementation is mandatory. Deficiency causes fatigue, neurological damage, and cognitive decline.</p>
+          </div>
+          <p><strong>Dose:</strong> 1000 mcg cyanocobalamin once or twice weekly, or 50-250 mcg daily — follow your clinician's guidance.</p>
+
+          <h3>Important nutrients on a plant-based diet</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Nutrient</th>
+                <th>Why it matters</th>
+                <th>Plant sources</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>B12</td><td>Nerves, cognition</td><td>Fortified foods</td><td><strong>Supplement — mandatory</strong></td></tr>
+              <tr><td>Vitamin D</td><td>Bone, immune</td><td>Sunlight</td><td>Supplement in winter; check 25-OH-D</td></tr>
+              <tr><td>Iodine</td><td>Thyroid</td><td>Seaweed, iodized salt</td><td>Use iodized salt</td></tr>
+              <tr><td>Omega-3 (DHA/EPA)</td><td>Brain, heart</td><td>Flax/chia/walnuts (ALA)</td><td>Consider algae oil for DHA</td></tr>
+              <tr><td>Iron</td><td>Blood, energy</td><td>Lentils, beans, spinach</td><td>Pair with vitamin C; check ferritin</td></tr>
+              <tr><td>Zinc</td><td>Immunity</td><td>Beans, nuts, seeds</td><td>Soaking/sprouting helps</td></tr>
+              <tr><td>Calcium</td><td>Bone</td><td>Fortified milks, tofu, greens</td><td>Ensure adequate intake</td></tr>
+            </tbody>
+          </table>
+
+          <h3>Red flags — when to see a doctor</h3>
+          <ul>
+            <li>Persistent fatigue, weakness, or shortness of breath</li>
+            <li>Numbness, tingling, or balance problems</li>
+            <li>Unexplained weight loss</li>
+            <li>Dizziness or fainting</li>
+            <li>Hair loss, brittle nails, or poor wound healing</li>
+            <li>Irregular heartbeat</li>
+          </ul>
+
+          <h3>Medication interactions</h3>
+          <p>Dietary change can dramatically alter medication effects. Diabetes medications, blood thinners (warfarin), blood pressure medications, and cholesterol medications may all need dose adjustments. <strong>Never stop, start, or change medication on your own.</strong></p>
+
+          <h3>Who should NOT do restrictive versions</h3>
+          <ul>
+            <li>Pregnancy and breastfeeding</li>
+            <li>Children and adolescents</li>
+            <li>People with a history of eating disorders</li>
+            <li>People with chronic kidney disease</li>
+            <li>Older adults at risk of frailty or undernutrition</li>
+          </ul>
+        </section>
+
+        <section id="onramp" aria-labelledby="onramp-title">
+          <h2 id="onramp-title">9. A 90-Day On-Ramp</h2>
+          <p>You do not change decades of habits in a weekend. Adjust the pace to your life; the point is forward motion, not perfection.</p>
+
+          <h3>Weeks 1-2: Foundation and observation</h3>
+          <ul>
+            <li>Start the food-mood journal.</li>
+            <li>Make water your default drink.</li>
+            <li>Add one serving of vegetables to every lunch and dinner.</li>
+            <li>Practice mindful eating at one meal a day.</li>
+            <li>Do a baseline blood panel.</li>
+          </ul>
+
+          <h3>Weeks 3-6: Build the natural plate</h3>
+          <ul>
+            <li>Build every meal on the natural plate.</li>
+            <li>Learn to cook 3-4 staple dishes.</li>
+            <li>Start batch cooking once a week.</li>
+            <li>Introduce one seasonal habit.</li>
+            <li>Begin your first n=1 experiment.</li>
+          </ul>
+
+          <h3>Weeks 7-12: Refine and personalize</h3>
+          <ul>
+            <li>Apply the conditional principle.</li>
+            <li>Run a second n=1 experiment.</li>
+            <li>Recheck bloodwork.</li>
+            <li>Expand your seasonal cooking.</li>
+            <li>Do your first quarterly review.</li>
+          </ul>
+
+          <h3>After day 90</h3>
+          <p>The on-ramp ends, but the skill continues. Keep the journal, recheck labs annually, run n=1 experiments as questions arise. Natural eating is not something you finish — it is something you practice, for life.</p>
+        </section>
+
+        <section id="appendix" aria-labelledby="appendix-title">
+          <h2 id="appendix-title">10. Appendix: Pantry, Kitchen, and Quick Reference</h2>
+
+          <h3>Pantry staples</h3>
+          <p><strong>Whole grains:</strong> brown rice, oats, quinoa, barley, millet, buckwheat, whole-wheat pasta, farro, corn.</p>
+          <p><strong>Legumes:</strong> lentils (red, green, brown), chickpeas, black beans, kidney beans, pinto beans, white beans, split peas.</p>
+          <p><strong>Soy:</strong> tofu, tempeh, edamame, soy milk.</p>
+          <p><strong>Nuts and seeds:</strong> walnuts, almonds, cashews, peanuts, flax, chia, hemp, pumpkin seeds, sunflower seeds, tahini, nut butters.</p>
+          <p><strong>Fats:</strong> extra-virgin olive oil, avocado, cold-pressed seed oils.</p>
+          <p><strong>Flavor:</strong> garlic, ginger, onion, chili, cumin, coriander, turmeric, cinnamon, paprika, soy sauce/tamari, miso, vinegar, lemon, nutritional yeast.</p>
+
+          <h3>Simple cooking methods</h3>
+          <ul>
+            <li><strong>Pressure cooker (Instant Pot):</strong> cooks dried beans in 30-45 minutes.</li>
+            <li><strong>Batch cooking:</strong> cook a big pot of beans, grains, and one vegetable dish on Sunday.</li>
+            <li><strong>Sheet-pan roasting:</strong> toss vegetables with olive oil and roast at 400°F.</li>
+            <li><strong>Stir-frying:</strong> quick, hot cooking with garlic and ginger.</li>
+            <li><strong>Soups and stews:</strong> throw beans, grains, and vegetables into a pot.</li>
+            <li><strong>Congee/porridge:</strong> simmer a grain with plenty of water until creamy.</li>
+          </ul>
+
+          <h3>Quick-reference food lists</h3>
+          <p><strong>Eat freely:</strong> all vegetables, all fruits, whole grains, legumes, tofu, tempeh, nuts, seeds, herbs, spices, water, unsweetened tea.</p>
+          <p><strong>Eat in moderation:</strong> refined grains, added oils, dried fruit, sweetened plant milks, salt.</p>
+          <p><strong>Eat rarely or avoid:</strong> sugary drinks, candy, pastries, fried food, fast food, highly processed snacks, red and processed meat, alcohol.</p>
+
+          <h3>Glossary of macrobiotic terms, modernized</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Traditional term</th>
+                <th>Modernized meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Yin / Yang</td><td>A heuristic for balance and variety, not a rigid cosmology</td></tr>
+              <tr><td>Whole grains as "staff of life"</td><td>Nutritious staple, one food among many</td></tr>
+              <tr><td>Chewing (50-100 times)</td><td>Eat slowly and thoroughly</td></tr>
+              <tr><td>Seasonal eating</td><td>Eat what grows locally at the current time of year</td></tr>
+              <tr><td>Eating according to condition</td><td>Adjust food to how you feel</td></tr>
+              <tr><td>Gratitude / mindfulness</td><td>Eat with attention and appreciation</td></tr>
+              <tr><td>Macrobiotic "cure" claims</td><td>Discarded — replaced by evidence-based medicine</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="closing" aria-labelledby="closing-title">
+          <h2 id="closing-title">Closing Thoughts</h2>
+          <p>Natural eating is not a diet you go on and off. It is a relationship you build with food, your body, and your place in the world. The macrobiotic tradition pointed the way with its emphasis on whole foods, seasons, balance, condition, and mindfulness. Modern science has confirmed the substance and added the safety details and the targets. Together they form a framework that is ancient in its wisdom and thoroughly modern in its evidence.</p>
+          <p>Start where you are. Keep the journal. Cook one good meal. Eat it slowly, with gratitude. Watch what your body tells you. Adjust. Repeat.</p>
+          <p>That is the whole skill. And it is a skill you can build for the rest of your life.</p>
+
+          <div class="callout" data-tone="info">
+            <p><em>This guide is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or another qualified health provider with any questions you may have regarding a medical condition.</em></p>
+          </div>
+        </section>
+
+      </article>
+    </div>
+
+  </main>
+
+  <footer class="container">
+    <p>&copy; <span id="year">2025</span> The Natural Plate. Built with <a href="https://github.com/rlnorthcutt/ivy" target="_blank" rel="noopener">Ivy</a> + <a href="https://github.com/rlnorthcutt/lattice" target="_blank" rel="noopener">Lattice</a>.</p>
+    <p class="muted text-sm" style="margin-top:0.25rem">Content licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license noopener">CC BY-NC 4.0</a> — share and adapt with attribution for non-commercial use only.</p>
+  </footer>
+
+  <script src="./dark-mode-toggle.min.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Planner — The Natural Plate</title>
+  <meta name="description" content="The Natural Plate meal planner — browse recipes, plan your week, and generate a grocery list.">
+
+  <!-- PREPAINT SCRIPT -->
+  <script>
+  (() => {
+    const KEY = 'dm:theme';
+    const root = document.documentElement;
+    const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+    let mode;
+    try { mode = localStorage.getItem(KEY); } catch {}
+    if (!mode) mode = (root.getAttribute('data-theme')==='dark'||root.classList.contains('dark'))?'dark':null;
+    if (!mode) mode = prefersDark ? 'dark' : 'light';
+    root.style.colorScheme = mode;
+    if (mode === 'dark') root.setAttribute('data-theme','dark');
+  })();
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rlnorthcutt/ivy/dist/ivy.full.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rlnorthcutt/lattice/dist/lattice.full.min.css">
+  <link rel="stylesheet" href="./theme.css">
+  <link rel="stylesheet" href="./site.css">
+</head>
+<body class="lattice">
+
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header role="banner">
+    <div class="container d-flex items-center justify-between gap-3">
+      <a href="./" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--color-text);font-weight:600;letter-spacing:-.01em">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--color-primary);flex:none">
+          <path d="M12 2c-4.5 0-8 3.5-8 8 0 4.5 3.5 8 8 8s8-3.5 8-8c0-4.5-3.5-8-8-8z"/>
+          <path d="M12 2v18M12 20c-2 0-4 2-4 4h8c0-2-2-4-4-4z"/>
+        </svg>
+        <span>The Natural Plate</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="./">Home</a></li>
+          <li><a href="./app.html" aria-current="page">App</a></li>
+          <li><a href="./docs.html">Guide</a></li>
+          <li><dark-mode-toggle></dark-mode-toggle></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+
+    <section class="page-title container" aria-labelledby="app-title">
+      <p class="kicker">The Natural Plate</p>
+      <h1 id="app-title">Meal Planner</h1>
+      <p class="lede">Browse recipes, plan your week, and generate a smart grocery list — all in one place.</p>
+    </section>
+
+    <!-- APP ROOT -->
+    <div class="container" x-data="naturalPlate" x-init="init">
+
+      <!-- VIEW TABS -->
+      <div class="view-tabs" role="tablist">
+        <button class="view-tab" :class="{ active: currentView === 'browse' }" @click="currentView = 'browse'; closeRecipe()" role="tab" :aria-selected="currentView === 'browse'">
+          Browse Recipes
+        </button>
+        <button class="view-tab" :class="{ active: currentView === 'plan' }" @click="currentView = 'plan'" role="tab" :aria-selected="currentView === 'plan'">
+          Meal Plan
+        </button>
+        <button class="view-tab" :class="{ active: currentView === 'list' }" @click="currentView = 'list'" role="tab" :aria-selected="currentView === 'list'">
+          Grocery List
+        </button>
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- VIEW: BROWSE RECIPES -->
+      <!-- ================================================================ -->
+      <div x-show="currentView === 'browse'" x-cloak>
+
+        <!-- Filters -->
+        <div class="filter-bar">
+          <input type="search" class="search-input" placeholder="Search recipes..." x-model="search">
+
+          <div class="filter-group" x-show="getAllValues('season').length">
+            <div class="filter-group-label">Season</div>
+            <div class="tags">
+              <template x-for="val in getAllValues('season')" :key="'s-'+val">
+                <span class="tag tag-pill" :class="{ active: isFilterActive('filterSeason', val) }" @click="toggleFilter('filterSeason', val)" x-text="val"></span>
+              </template>
+            </div>
+          </div>
+
+          <div class="filter-group" x-show="getAllValues('meal').length">
+            <div class="filter-group-label">Meal</div>
+            <div class="tags">
+              <template x-for="val in getAllValues('meal')" :key="'m-'+val">
+                <span class="tag tag-pill" :class="{ active: isFilterActive('filterMeal', val) }" @click="toggleFilter('filterMeal', val)" x-text="val"></span>
+              </template>
+            </div>
+          </div>
+
+          <div class="filter-group" x-show="getAllValues('dietary').length">
+            <div class="filter-group-label">Dietary</div>
+            <div class="tags">
+              <template x-for="val in getAllValues('dietary')" :key="'d-'+val">
+                <span class="tag tag-pill" :class="{ active: isFilterActive('filterDietary', val) }" @click="toggleFilter('filterDietary', val)" x-text="val"></span>
+              </template>
+            </div>
+          </div>
+
+          <div class="filter-group" x-show="getAllValues('tags').length">
+            <div class="filter-group-label">Tags</div>
+            <div class="tags">
+              <template x-for="val in getAllValues('tags')" :key="'t-'+val">
+                <span class="tag tag-pill" :class="{ active: isFilterActive('filterTags', val) }" @click="toggleFilter('filterTags', val)" x-text="val"></span>
+              </template>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-group-label">Difficulty</div>
+            <div class="tags">
+              <span class="tag tag-pill" :class="{ active: filterDifficulty === '' }" @click="filterDifficulty = ''">All</span>
+              <span class="tag tag-pill" :class="{ active: filterDifficulty === 'easy' }" @click="filterDifficulty = 'easy'">Easy</span>
+              <span class="tag tag-pill" :class="{ active: filterDifficulty === 'medium' }" @click="filterDifficulty = 'medium'">Medium</span>
+              <span class="tag tag-pill" :class="{ active: filterDifficulty === 'hard' }" @click="filterDifficulty = 'hard'">Hard</span>
+            </div>
+          </div>
+
+          <button class="btn btn-sm" data-variant="outline" @click="clearFilters" x-show="hasActiveFilters" style="margin-top:0.5rem">Clear filters</button>
+        </div>
+
+        <p class="muted text-sm mb-1" x-text="filteredRecipes.length + ' recipe' + (filteredRecipes.length !== 1 ? 's' : '')"></p>
+
+        <div x-show="filteredRecipes.length > 0" class="recipe-grid">
+          <template x-for="recipe in filteredRecipes" :key="recipe.id">
+            <div class="recipe-card" @click="showRecipe(recipe)">
+              <div class="recipe-card-image">
+                <template x-if="recipe.image">
+                  <img :src="recipe.image" :alt="recipe.title" style="display:block;width:100%;height:100%;object-fit:cover" loading="lazy">
+                </template>
+                <template x-if="!recipe.image">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                  </svg>
+                </template>
+              </div>
+              <div class="recipe-card-body">
+                <h3 x-text="recipe.title"></h3>
+                <div class="meta">
+                  <span x-text="recipe.total_time"></span>
+                  <span x-text="recipe.difficulty"></span>
+                  <span x-text="recipe.servings + ' servings'"></span>
+                </div>
+                <div class="meta">
+                  <template x-for="tag in (recipe.tags || [])" :key="tag">
+                    <span class="tag" x-text="tag"></span>
+                  </template>
+                </div>
+                <p class="description" x-text="recipe.description"></p>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <div class="empty-state" x-show="filteredRecipes.length === 0 && recipes.length > 0">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p>No recipes match your filters. Try adjusting your search or <a href="#" @click.prevent="clearFilters">clear all filters</a>.</p>
+        </div>
+
+        <div class="empty-state" x-show="recipes.length === 0">
+          <p>Loading recipes...</p>
+        </div>
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- VIEW: MEAL PLAN -->
+      <!-- ================================================================ -->
+      <div x-show="currentView === 'plan'" x-cloak>
+
+        <div class="plan-controls">
+          <input type="text" placeholder="Plan name..." x-model="currentPlanName" @keyup.enter="savePlan(currentPlanName)">
+          <button class="btn btn-sm" data-variant="primary" @click="savePlan(currentPlanName)">Save Plan</button>
+          <button class="btn btn-sm" data-variant="outline" @click="newPlan()">New Plan</button>
+
+          <template x-if="plans.length > 0">
+            <span class="muted text-sm" style="display:flex;flex-wrap:wrap;align-items:center;gap:0.35rem">
+              <span style="margin-right:0.15rem;">| Load:</span>
+              <template x-for="plan in plans" :key="plan.name">
+                <button class="btn btn-sm" data-variant="outline" @click="loadPlan(plan.name)" x-text="plan.name" style="font-size:0.78rem"></button>
+              </template>
+            </span>
+          </template>
+        </div>
+
+        <div class="empty-state" x-show="!currentPlanData">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          <p>No plan loaded. Create a new plan or load a saved one.</p>
+          <button class="btn" data-variant="primary" @click="newPlan()">Create a Plan</button>
+        </div>
+
+        <div x-show="currentPlanData" style="overflow-x:auto">
+          <table class="plan-grid">
+            <thead>
+              <tr>
+                <th></th>
+                <template x-for="(day, i) in planDays" :key="i">
+                  <th x-text="day"></th>
+                </template>
+              </tr>
+            </thead>
+            <tbody>
+              <template x-for="(slot, si) in mealSlots" :key="si">
+                <tr>
+                  <td style="white-space:nowrap;font-weight:600;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.03em;color:var(--color-muted)" x-text="slot"></td>
+                  <template x-for="(day, di) in planDays" :key="di">
+                    <td>
+                      <div>
+                        <div class="slot-recipe" x-show="getMealRecipe(di, slot)">
+                          <span x-text="getMealRecipe(di, slot) ? getMealRecipe(di, slot).title : ''"></span>
+                        </div>
+                        <div style="margin-top:0.15rem">
+                          <select :value="currentPlanData && currentPlanData.days[di] ? currentPlanData.days[di][slot] || '' : ''" @change="addRecipeToMeal(di, slot, $event.target.value)">
+                            <option value="">— Select —</option>
+                            <template x-for="r in filteredRecipes" :key="r.id">
+                              <option :value="r.id" x-text="r.title"></option>
+                            </template>
+                          </select>
+                        </div>
+                      </div>
+                    </td>
+                  </template>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- VIEW: GROCERY LIST -->
+      <!-- ================================================================ -->
+      <div x-show="currentView === 'list'" x-cloak>
+
+        <div x-show="currentPlanData" class="mb-2">
+          <p class="text-sm muted">Based on: <strong x-text="currentPlanData.name"></strong></p>
+          <div class="btn-group" style="margin-top:0.5rem">
+            <button class="btn btn-sm" data-variant="primary" @click="printGroceryList()">Print</button>
+            <button class="btn btn-sm" data-variant="outline" @click="copyGroceryList()">Copy</button>
+            <button class="btn btn-sm" data-variant="outline" @click="clearChecks()">Clear checks</button>
+          </div>
+        </div>
+
+        <div x-show="!currentPlanData" class="empty-state">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <p>No plan loaded. Go to the <a href="#" @click.prevent="currentView = 'plan'">Meal Plan</a> tab to create or load a plan first.</p>
+        </div>
+
+        <div x-show="currentPlanData && groceryItems.length > 0">
+          <template x-for="(items, type) in groceryGroups" :key="type">
+            <div class="grocery-group">
+              <h3 x-text="type.charAt(0).toUpperCase() + type.slice(1)"></h3>
+              <template x-for="(item, idx) in items" :key="type + '-' + idx">
+                <label class="grocery-item" :class="{ checked: item.checked }">
+                  <input type="checkbox" :checked="item.checked" @change="toggleItem(groceryItems.indexOf(item))">
+                  <span x-text="item.name"></span>
+                  <span class="muted text-sm" x-text="item.amount ? '(' + item.amount + ')' : ''"></span>
+                </label>
+              </template>
+            </div>
+          </template>
+        </div>
+
+        <div class="empty-state" x-show="currentPlanData && groceryItems.length === 0">
+          <p>No recipes assigned to this plan. Add some recipes in the <a href="#" @click.prevent="currentView = 'plan'">Meal Plan</a> tab.</p>
+        </div>
+
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- RECIPE DETAIL MODAL -->
+      <!-- ================================================================ -->
+      <div class="modal-overlay" x-show="selectedRecipe" x-cloak @click.self="closeRecipe()">
+        <div class="modal-content" x-show="selectedRecipe" x-transition>
+          <button class="modal-close" @click="closeRecipe()" aria-label="Close">&times;</button>
+
+          <h2 x-text="selectedRecipe.title"></h2>
+          <div class="meta-line">
+            <span x-show="selectedRecipe.total_time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:0.15rem"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span x-text="selectedRecipe.total_time"></span></span>
+            <span x-show="selectedRecipe.difficulty"><span x-text="selectedRecipe.difficulty"></span></span>
+            <span x-show="selectedRecipe.servings"><span x-text="selectedRecipe.servings"></span> servings</span>
+          </div>
+
+          <div class="meta-line">
+            <template x-for="tag in (selectedRecipe.tags || [])" :key="tag">
+              <span class="tag tag-primary" x-text="tag"></span>
+            </template>
+          </div>
+
+          <div class="meta-line" x-show="selectedRecipe.source">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:0.15rem"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            <a :href="selectedRecipe.source" target="_blank" rel="noopener" x-text="'Source: ' + selectedRecipe.source"></a>
+          </div>
+
+          <template x-if="selectedRecipe.description">
+            <div>
+              <div class="section-label">Description</div>
+              <p x-text="selectedRecipe.description"></p>
+            </div>
+          </template>
+
+          <template x-if="selectedRecipe.ingredients && selectedRecipe.ingredients.length">
+            <div>
+              <div class="section-label">Ingredients</div>
+              <ul class="ingredients">
+                <template x-for="ing in selectedRecipe.ingredients" :key="ing.name">
+                  <li><span x-text="ing.amount"></span> <span x-text="ing.name"></span></li>
+                </template>
+              </ul>
+            </div>
+          </template>
+
+          <button class="btn btn-sm" data-variant="outline" @click="closeRecipe()">Close</button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="container">
+    <p>&copy; <span id="year">2025</span> The Natural Plate. Built with <a href="https://github.com/rlnorthcutt/ivy" target="_blank" rel="noopener">Ivy</a> + <a href="https://github.com/rlnorthcutt/lattice" target="_blank" rel="noopener">Lattice</a>.</p>
+    <p class="muted text-sm" style="margin-top:0.25rem">Content licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license noopener">CC BY-NC 4.0</a> — share and adapt with attribution for non-commercial use only.</p>
+  </footer>
+
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <!-- App JS -->
+  <script src="./app.js" defer></script>
+  <!-- Dark mode toggle -->
+  <script src="./dark-mode-toggle.min.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
