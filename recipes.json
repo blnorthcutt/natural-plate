@@ -660,6 +660,119 @@
       "description": "The NYT Cooking take on the beloved chickpea salad sandwich: chickpeas mashed into a rich, creamy tahini-lemon dressing with grated Parmesan, celery, and scallions, then piled onto multigrain bread with crunchy lettuce, alfalfa sprouts, avocado, and ..."
     },
     {
+      "id": "chopped-wedge-salad",
+      "title": "Chopped Wedge Salad",
+      "slug": "chopped-wedge-salad",
+      "source": "https://cooking.nytimes.com/recipes/1025164-chopped-wedge-salad",
+      "image": "./recipes/images/26-chopped-wedge-salad.jpg",
+      "file": "./recipes/26-chopped-wedge-salad.md",
+      "servings": 4,
+      "prep_time": "15 min",
+      "cook_time": "10 min",
+      "total_time": "25 min",
+      "difficulty": "easy",
+      "season": [
+        "summer",
+        "spring"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "gluten-free",
+        "nut-free",
+        "soy-free"
+      ],
+      "tags": [
+        "quick",
+        "comfort",
+        "high-protein",
+        "party"
+      ],
+      "ingredients": [
+        {
+          "name": "cherry tomatoes",
+          "amount": "1 pint, halved",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "shallot",
+          "amount": "1, halved and thinly sliced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "lemon",
+          "amount": "1, zest (2 tsp) and juice (2 tbsp)",
+          "type": "produce",
+          "kind": "citrus"
+        },
+        {
+          "name": "worcestershire sauce",
+          "amount": "1/2 tsp",
+          "type": "condiments",
+          "kind": "sauce"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "buttermilk",
+          "amount": "1/4 cup, well shaken",
+          "type": "dairy",
+          "kind": "liquid"
+        },
+        {
+          "name": "plain greek yogurt",
+          "amount": "1/4 cup, full-fat",
+          "type": "dairy",
+          "kind": "yogurt"
+        },
+        {
+          "name": "mayonnaise",
+          "amount": "2 tbsp",
+          "type": "condiments",
+          "kind": "sauce"
+        },
+        {
+          "name": "bacon",
+          "amount": "6 thick-cut slices, thinly sliced crosswise",
+          "type": "pantry",
+          "kind": "meat"
+        },
+        {
+          "name": "iceberg lettuce",
+          "amount": "1 large head (about 1 1/2 lb), cored and coarsely chopped",
+          "type": "produce",
+          "kind": "leafy green"
+        },
+        {
+          "name": "blue cheese",
+          "amount": "3 oz, crumbled",
+          "type": "dairy",
+          "kind": "cheese"
+        },
+        {
+          "name": "chives",
+          "amount": "1 small bunch, sliced into 1/2-inch pieces",
+          "type": "produce",
+          "kind": "herb"
+        }
+      ],
+      "description": "A clever rework of the classic steakhouse wedge: instead of serving a stubborn wedge that loses its toppings halfway through, everything is chopped to the same size and tossed together so the lettuce gets thoroughly dressed and every bite has the ful..."
+    },
+    {
       "id": "cowboy-caviar",
       "title": "Cowboy Caviar",
       "slug": "cowboy-caviar",
@@ -2719,7 +2832,7 @@
     }
   ],
   "meta": {
-    "count": 28,
+    "count": 29,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
