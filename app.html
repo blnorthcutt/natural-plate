@@ -272,7 +272,7 @@
               <h3 x-text="type.charAt(0).toUpperCase() + type.slice(1)"></h3>
               <template x-for="(item, idx) in items" :key="type + '-' + idx">
                 <label class="grocery-item" :class="{ checked: item.checked }">
-                  <input type="checkbox" :checked="item.checked" @change="toggleItem(groceryItems.indexOf(item))">
+                  <input type="checkbox" :checked="item.checked" @change="toggleItem(item)">
                   <span x-text="item.name"></span>
                   <span class="muted text-sm" x-text="item.amount ? '(' + item.amount + ')' : ''"></span>
                 </label>

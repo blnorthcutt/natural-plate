@@ -222,7 +222,7 @@ document.addEventListener('alpine:init', () => {
       const whole = Math.floor(v);
       const frac = Math.round((v - whole) * 1000) / 1000;
       if (frac === 0) return whole.toString();
-      const map = { 0125: '1/8', 0.25: '1/4', 0.333: '1/3', 0.375: '3/8', 0.5: '1/2', 0.625: '5/8', 0.666: '2/3', 0.75: '3/4', 0.875: '7/8' };
+      const map = { 0.125: '1/8', 0.25: '1/4', 0.333: '1/3', 0.375: '3/8', 0.5: '1/2', 0.625: '5/8', 0.666: '2/3', 0.75: '3/4', 0.875: '7/8' };
       let best = null, bestDelta = 1;
       Object.entries(map).forEach(([dec, lab]) => {
         const d = Math.abs(frac - parseFloat(dec));
@@ -261,20 +261,19 @@ document.addEventListener('alpine:init', () => {
 
     get groceryItems() {
       if (!this.currentPlanData) return [];
-      var items = {};
-      var vm = this;
+      const items = {};
 
-      this.currentPlanData.days.forEach(function(day, dayIdx) {
-        vm.mealSlots.forEach(function(slot) {
-          var recipeId = day[slot];
+      this.currentPlanData.days.forEach(day => {
+        this.mealSlots.forEach(slot => {
+          const recipeId = day[slot];
           if (!recipeId) return;
-          var recipe = vm.getRecipeById(recipeId);
+          const recipe = this.getRecipeById(recipeId);
           if (!recipe || !recipe.ingredients) return;
 
-          recipe.ingredients.forEach(function(ing) {
-            var key = ing.name.toLowerCase();
+          recipe.ingredients.forEach(ing => {
+            const key = ing.name.toLowerCase();
             if (!items[key]) {
-              items[key] = { name: ing.name, amounts: [], type: ing.type || 'pantry', checked: vm.groceryChecks[key] || false };
+              items[key] = { name: ing.name, amounts: [], type: ing.type || 'pantry' };
             }
             if (ing.amount && ing.amount !== 'to taste') {
               items[key].amounts.push(ing.amount);
@@ -285,15 +284,20 @@ document.addEventListener('alpine:init', () => {
         });
       });
 
-      var result = Object.keys(items).map(function(key) {
-        var item = items[key];
-        return { name: item.name, amount: vm._consolidateAmount(item.amounts), type: item.type, checked: item.checked };
+      const result = Object.keys(items).map(key => {
+        const item = items[key];
+        return {
+          name: item.name,
+          amount: this._consolidateAmount(item.amounts),
+          type: item.type,
+          checked: this.groceryChecks[key] || false
+        };
       });
 
-      var typeOrder = ['produce', 'grains', 'legumes', 'pantry', 'condiments', 'dairy', 'other'];
-      result.sort(function(a, b) {
-        var aIdx = typeOrder.indexOf(a.type);
-        var bIdx = typeOrder.indexOf(b.type);
+      const typeOrder = ['produce', 'grains', 'legumes', 'pantry', 'condiments', 'dairy', 'other'];
+      result.sort((a, b) => {
+        let aIdx = typeOrder.indexOf(a.type);
+        let bIdx = typeOrder.indexOf(b.type);
         if (aIdx === -1) aIdx = typeOrder.length - 1;
         if (bIdx === -1) bIdx = typeOrder.length - 1;
         if (aIdx !== bIdx) return aIdx - bIdx;
@@ -304,30 +308,24 @@ document.addEventListener('alpine:init', () => {
     },
 
     get groceryGroups() {
-      var groups = {};
-      this.groceryItems.forEach(function(item) {
-        var type = item.type || 'other';
+      const groups = {};
+      this.groceryItems.forEach(item => {
+        const type = item.type || 'other';
         if (!groups[type]) groups[type] = [];
         groups[type].push(item);
       });
       return groups;
     },
 
-    toggleItem(index) {
-      var items = this.groceryItems;
-      if (items[index]) {
-        items[index].checked = !items[index].checked;
-        var key = items[index].name.toLowerCase();
-        this.groceryChecks[key] = items[index].checked;
-      }
+    toggleItem(item) {
+      const key = item.name.toLowerCase();
+      this.groceryChecks[key] = !this.groceryChecks[key];
     },
 
     clearChecks() {
-      var vm = this;
-      this.groceryItems.forEach(function(item) {
-        item.checked = false;
-        var key = item.name.toLowerCase();
-        vm.groceryChecks[key] = false;
+      this.groceryItems.forEach(item => {
+        const key = item.name.toLowerCase();
+        this.groceryChecks[key] = false;
       });
     },
 
@@ -338,42 +336,54 @@ document.addEventListener('alpine:init', () => {
     copyGroceryList() {
       if (!this.currentPlanData || this.groceryItems.length === 0) return;
 
-      var text = "Grocery List: " + this.currentPlanData.name + "\n";
+      let text = `Grocery List: ${this.currentPlanData.name}\n`;
       text += "==============================\n";
 
-      var vm = this;
-      Object.keys(this.groceryGroups).forEach(function(type) {
-        text += "\n" + type.charAt(0).toUpperCase() + type.slice(1) + ":\n";
-        vm.groceryGroups[type].forEach(function(item) {
-          var check = item.checked ? "[x]" : "[ ]";
-          var amt = item.amount ? " (" + item.amount + ")" : "";
-          text += "  " + check + " " + item.name + amt + "\n";
+      Object.keys(this.groceryGroups).forEach(type => {
+        text += `\n${type.charAt(0).toUpperCase() + type.slice(1)}:\n`;
+        this.groceryGroups[type].forEach(item => {
+          const check = item.checked ? "[x]" : "[ ]";
+          const amt = item.amount ? ` (${item.amount})` : "";
+          text += `  ${check} ${item.name}${amt}\n`;
         });
       });
 
       text += "\n---\nGenerated by The Natural Plate";
 
+      const done = () => alert("Grocery list copied! Paste it into Google Keep, Notes, etc.");
+
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function() {
-          alert("Grocery list copied! Paste it into Google Keep, Notes, etc.");
+        navigator.clipboard.writeText(text).then(done).catch(() => {
+          // Fallback for non-secure contexts where clipboard API is unavailable
+          this._legacyCopy(text, done);
         });
       } else {
-        var ta = document.createElement("textarea");
-        ta.value = text;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand("copy");
-        ta.remove();
-        alert("Grocery list copied to clipboard!");
+        this._legacyCopy(text, done);
       }
     },
 
+    _legacyCopy(text, onDone) {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand("copy");
+      } catch (e) {
+        console.warn("execCommand copy failed", e);
+      }
+      ta.remove();
+      onDone();
+    },
+
     getAllValues(key) {
-      var values = new Set();
-      this.recipes.forEach(function(r) {
-        var val = r[key];
+      const values = new Set();
+      this.recipes.forEach(r => {
+        const val = r[key];
         if (Array.isArray(val)) {
-          val.forEach(function(v) { values.add(v); });
+          val.forEach(v => values.add(v));
         }
       });
       return [...values].sort();
