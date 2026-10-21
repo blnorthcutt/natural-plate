@@ -866,6 +866,97 @@
       "description": "For a vegan hot chocolate that rivals even the creamiest dairy-laden variety, add a few tablespoons of nut butter like almond, sunflower, or peanut to the nondairy milk, chocolate chips, and cocoa powder. The nut butter adds body and richness that ma..."
     },
     {
+      "id": "crispy-gnocchi-with-burst-tomatoes-and-mozzarella",
+      "title": "Crispy Gnocchi With Burst Tomatoes and Mozzarella",
+      "slug": "crispy-gnocchi-with-burst-tomatoes-and-mozzarella",
+      "source": "https://cooking.nytimes.com/recipes/1022024-crispy-gnocchi-with-burst-tomatoes-and-mozzarella",
+      "image": "./recipes/images/23-crispy-gnocchi-with-burst-tomatoes-and-mozzarella.jpg",
+      "file": "./recipes/23-crispy-gnocchi-with-burst-tomatoes-and-mozzarella.md",
+      "servings": 4,
+      "prep_time": "10 min",
+      "cook_time": "15 min",
+      "total_time": "25 min",
+      "difficulty": "easy",
+      "season": [
+        "summer"
+      ],
+      "meal": [
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian"
+      ],
+      "tags": [
+        "quick",
+        "one-pot",
+        "summer",
+        "comfort"
+      ],
+      "ingredients": [
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "2 tbsp, plus more as needed",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "potato gnocchi",
+          "amount": "2 packages (12 to 18 oz each), shelf-stable or refrigerated",
+          "type": "grains",
+          "kind": "pasta"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "1/4 cup",
+          "type": "dairy",
+          "kind": "butter"
+        },
+        {
+          "name": "garlic",
+          "amount": "4 cloves, thinly sliced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "red-pepper flakes",
+          "amount": "1/4 tsp, plus more for serving",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "salt",
+          "amount": "1 1/2 tsp, plus more to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "black pepper",
+          "amount": "a few grinds, plus more for serving",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "cherry tomatoes",
+          "amount": "2 pints, such as cherry, grape or Sungold",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "basil leaves",
+          "amount": "1/4 cup thinly sliced or torn (optional), plus more for serving",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "fresh mozzarella",
+          "amount": "8 oz, cut or torn into 1/2-inch pieces",
+          "type": "dairy",
+          "kind": "cheese"
+        }
+      ],
+      "description": "Pan-fried gnocchi is a faster, stovetop version of baked pasta: store-bought gnocchi browns right in the skillet — no boiling required — for crispy outsides and chewy middles. Here they're tossed with cherry tomatoes that burst into a bright sauce wi..."
+    },
+    {
       "id": "grilled-corn-and-avocado-salad-with-feta-dressing",
       "title": "Grilled Corn and Avocado Salad With Feta Dressing",
       "slug": "grilled-corn-and-avocado-salad-with-feta-dressing",
@@ -2339,7 +2430,7 @@
     }
   ],
   "meta": {
-    "count": 24,
+    "count": 25,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
