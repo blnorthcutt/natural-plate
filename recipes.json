@@ -2166,6 +2166,85 @@
       "description": "This NYT Cooking recipe from Ali Slagle turns tomato salad into a meal by marrying creamy beans with the briny, salty hallmarks of pasta puttanesca: tomatoes, capers, olives and garlic. Coarsely chopped pebbles of Parmesan add bursts of umami, and wh..."
     },
     {
+      "id": "salmon-and-kimchi-skillet",
+      "title": "Salmon and Kimchi Skillet",
+      "slug": "salmon-and-kimchi-skillet",
+      "source": "https://cooking.nytimes.com/recipes/1025962-salmon-and-kimchi-skillet",
+      "image": "./recipes/images/35-salmon-and-kimchi-skillet.jpg",
+      "file": "./recipes/35-salmon-and-kimchi-skillet.md",
+      "servings": 4,
+      "prep_time": "5 min",
+      "cook_time": "15 min",
+      "total_time": "20 min",
+      "difficulty": "easy",
+      "season": [
+        "spring",
+        "autumn"
+      ],
+      "meal": [
+        "dinner"
+      ],
+      "dietary": [
+        "gluten-free",
+        "nut-free"
+      ],
+      "tags": [
+        "quick",
+        "one-pot"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "2 tbsp",
+          "type": "dairy",
+          "kind": "butter"
+        },
+        {
+          "name": "toasted sesame oil",
+          "amount": "1 tbsp",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "kimchi",
+          "amount": "1 (16 oz) jar chopped cabbage kimchi (about 2 cups)",
+          "type": "produce",
+          "kind": "fermented"
+        },
+        {
+          "name": "sugar",
+          "amount": "1/2 tsp",
+          "type": "pantry",
+          "kind": "sweetener"
+        },
+        {
+          "name": "salmon fillets",
+          "amount": "4 (6 to 8 oz each), patted dry",
+          "type": "pantry",
+          "kind": "seafood"
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "scallions",
+          "amount": "chopped, for topping (optional)",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "sesame seeds",
+          "amount": "for topping (optional)",
+          "type": "pantry",
+          "kind": "seed"
+        }
+      ],
+      "description": "Sautéing kimchi brings out its mellower side: a delicious, cabbage-y sweetness. In this lightning-fast skillet dinner, jarred cabbage kimchi is cooked in a fragrant mix of butter and toasted sesame oil with just a touch of sugar, creating a four-ingr..."
+    },
+    {
       "id": "savory-oat-porridge-greens-tofu-scramble",
       "title": "Savory Oat Porridge with Greens & Tofu Scramble",
       "slug": "savory-oat-porridge-greens-tofu-scramble",
@@ -3258,7 +3337,7 @@
     }
   ],
   "meta": {
-    "count": 33,
+    "count": 34,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
@@ -3348,6 +3427,7 @@
       "root vegetable",
       "salt",
       "sauce",
+      "seafood",
       "seed",
       "snack",
       "spice",
