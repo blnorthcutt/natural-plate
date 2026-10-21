@@ -1143,6 +1143,115 @@
       "description": "Crunchy cucumbers and creamy avocados are the stars of this simple five-ingredient salad from Ali Slagle. Peeling the cucumbers in alternating stripes helps them soak up seasonings while maintaining their shape. After being salted and drained, they'r..."
     },
     {
+      "id": "dooymaaj-salad",
+      "title": "Dooymaaj Salad",
+      "slug": "dooymaaj-salad",
+      "source": "https://cooking.nytimes.com/recipes/1022542-dooymaaj-salad",
+      "image": "./recipes/images/32-dooymaaj-salad.jpg",
+      "file": "./recipes/32-dooymaaj-salad.md",
+      "servings": 4,
+      "prep_time": "15 min",
+      "cook_time": "5 min",
+      "total_time": "20 min",
+      "difficulty": "easy",
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian"
+      ],
+      "tags": [
+        "quick",
+        "summer"
+      ],
+      "ingredients": [
+        {
+          "name": "lavash bread",
+          "amount": "2 pieces (8 1/2 by 11 1/2 inches each)",
+          "type": "grains",
+          "kind": "bread"
+        },
+        {
+          "name": "fresh parsley",
+          "amount": "3 loosely packed cups (from 1 bunch), coarsely chopped",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "fresh mint",
+          "amount": "2 cups loosely packed (from 1 small bunch), coarsely chopped",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "fresh basil",
+          "amount": "1 1/4 cups loosely packed Persian, lemon or other, coarsely chopped",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "scallions",
+          "amount": "2, thinly sliced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "feta cheese",
+          "amount": "1/2 cup crumbled (2 oz)",
+          "type": "dairy",
+          "kind": "cheese"
+        },
+        {
+          "name": "walnuts",
+          "amount": "1/2 cup, coarsely chopped",
+          "type": "pantry",
+          "kind": "nut"
+        },
+        {
+          "name": "red wine vinegar",
+          "amount": "2 tbsp",
+          "type": "condiments",
+          "kind": "vinegar"
+        },
+        {
+          "name": "dried mint",
+          "amount": "2 tbsp",
+          "type": "pantry",
+          "kind": "herb"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "1 tsp (Diamond Crystal), plus more if needed",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "black pepper",
+          "amount": "3/4 tsp, plus more if needed",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "extra-virgin olive oil",
+          "amount": "1/4 cup",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "buttermilk",
+          "amount": "1 cup",
+          "type": "dairy",
+          "kind": "liquid"
+        }
+      ],
+      "description": "A refreshing, zesty, herb-filled bread salad inspired by dooymaaj, a nostalgic Iranian childhood snack of dried, days-old bread combined with fresh herbs, cheese and walnuts — an effort not to waste a single crumb. This version turns the beloved snac..."
+    },
+    {
       "id": "grilled-corn-and-avocado-salad-with-feta-dressing",
       "title": "Grilled Corn and Avocado Salad With Feta Dressing",
       "slug": "grilled-corn-and-avocado-salad-with-feta-dressing",
@@ -2255,6 +2364,105 @@
       "description": "Inspired by the many cold silken tofu dishes of East Asia — Japanese hiyayakko and Chinese liangban tofu among them — this no-cook dish drapes silky, chilled tofu in a punchy soy dressing brightened with sesame oil, chile oil, vinegar, and toasted se..."
     },
     {
+      "id": "southern-broccoli-salad",
+      "title": "Southern Broccoli Salad",
+      "slug": "southern-broccoli-salad",
+      "source": "https://cooking.nytimes.com/recipes/1023279-southern-broccoli-salad",
+      "image": "./recipes/images/31-southern-broccoli-salad.jpg",
+      "file": "./recipes/31-southern-broccoli-salad.md",
+      "servings": 6,
+      "prep_time": "10 min",
+      "cook_time": "10 min",
+      "total_time": "15 minutes",
+      "difficulty": "easy",
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "gluten-free"
+      ],
+      "tags": [
+        "quick",
+        "summer",
+        "make-ahead",
+        "packable"
+      ],
+      "ingredients": [
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "bacon",
+          "amount": "8 oz",
+          "type": "pantry",
+          "kind": "meat"
+        },
+        {
+          "name": "broccoli",
+          "amount": "10 cups (1½ lbs), cut into 1- to 1½-inch florets",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "mayonnaise",
+          "amount": "1 cup",
+          "type": "condiments",
+          "kind": "sauce"
+        },
+        {
+          "name": "red onion",
+          "amount": "¼ cup finely chopped",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "apple cider vinegar",
+          "amount": "2 tbsp",
+          "type": "condiments",
+          "kind": "vinegar"
+        },
+        {
+          "name": "granulated sugar",
+          "amount": "1 tbsp",
+          "type": "pantry",
+          "kind": "sweetener"
+        },
+        {
+          "name": "cheddar cheese",
+          "amount": "1 cup coarsely grated",
+          "type": "dairy",
+          "kind": "cheese"
+        },
+        {
+          "name": "golden raisins",
+          "amount": "½ cup",
+          "type": "produce",
+          "kind": "dried fruit"
+        },
+        {
+          "name": "sunflower seeds",
+          "amount": "½ cup roasted, salted",
+          "type": "pantry",
+          "kind": "seed"
+        }
+      ],
+      "description": "This classic Southern broccoli salad is a staple at potlucks, picnics, and family gatherings across the Carolinas and beyond. Crisp blanched broccoli is tossed in a creamy, tangy dressing with sharp Cheddar, sweet golden raisins, and crunchy sunflowe..."
+    },
+    {
       "id": "spicy-corn-and-shishito-salad",
       "title": "Spicy Corn and Shishito Salad",
       "slug": "spicy-corn-and-shishito-salad",
@@ -2933,7 +3141,7 @@
     }
   ],
   "meta": {
-    "count": 30,
+    "count": 32,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
