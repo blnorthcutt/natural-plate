@@ -1252,6 +1252,90 @@
       "description": "A refreshing, zesty, herb-filled bread salad inspired by dooymaaj, a nostalgic Iranian childhood snack of dried, days-old bread combined with fresh herbs, cheese and walnuts — an effort not to waste a single crumb. This version turns the beloved snac..."
     },
     {
+      "id": "fastest-pasta-with-spinach-sauce",
+      "title": "Fastest Pasta With Spinach Sauce",
+      "slug": "fastest-pasta-with-spinach-sauce",
+      "source": "https://cooking.nytimes.com/recipes/7759-fastest-pasta-with-spinach-sauce",
+      "image": "./recipes/images/37-fastest-pasta-with-spinach-sauce.jpg",
+      "file": "./recipes/37-fastest-pasta-with-spinach-sauce.md",
+      "servings": 4,
+      "prep_time": "10 min",
+      "cook_time": "15 min",
+      "total_time": "25 min",
+      "difficulty": "easy",
+      "season": [
+        "spring",
+        "summer",
+        "autumn",
+        "winter"
+      ],
+      "meal": [
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian",
+        "dairy-free",
+        "nut-free",
+        "soy-free"
+      ],
+      "tags": [
+        "quick",
+        "one-pot",
+        "weeknight"
+      ],
+      "ingredients": [
+        {
+          "name": "garlic",
+          "amount": "1 clove, minced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "crushed red pepper flakes",
+          "amount": "1/2 tsp, or to taste (optional)",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "kalamata olives",
+          "amount": "15, pitted and roughly chopped",
+          "type": "pantry",
+          "kind": "pickled"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "1/4 cup plus 1 tbsp",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "long pasta",
+          "amount": "1 lb (linguine or similar)",
+          "type": "grains",
+          "kind": "pasta"
+        },
+        {
+          "name": "spinach",
+          "amount": "1 lb, washed, tough stems removed, roughly chopped",
+          "type": "produce",
+          "kind": "leafy green"
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "black pepper",
+          "amount": "freshly ground, to taste",
+          "type": "pantry",
+          "kind": "spice"
+        }
+      ],
+      "description": "Sometimes the very best pasta is the simplest, and this one takes that idea to its logical end: the \"sauce\" is just garlic, olives, red pepper flakes and olive oil stirred together at the bottom of a bowl, while the spinach wilts in the same pot as t..."
+    },
+    {
       "id": "grilled-corn-and-avocado-salad-with-feta-dressing",
       "title": "Grilled Corn and Avocado Salad With Feta Dressing",
       "slug": "grilled-corn-and-avocado-salad-with-feta-dressing",
@@ -1948,6 +2032,80 @@
         }
       ],
       "description": "A creamy, no-cook breakfast that comes together in 10 minutes the night before. The oats soften overnight into a pudding-like texture, and the chia seeds add a gentle thickening power along with omega-3s. Top with fresh berries and a drizzle of almon..."
+    },
+    {
+      "id": "pasta-aglio-olio-e-peperoncino",
+      "title": "Pasta Aglio, Olio e Peperoncino",
+      "slug": "pasta-aglio-olio-e-peperoncino",
+      "source": "https://cooking.nytimes.com/recipes/1017306-pasta-aglio-olio-e-peperoncino",
+      "image": "./recipes/images/36-pasta-aglio-olio-e-peperoncino.jpg",
+      "file": "./recipes/36-pasta-aglio-olio-e-peperoncino.md",
+      "servings": 4,
+      "prep_time": "5 min",
+      "cook_time": "15 min",
+      "total_time": "20 minutes",
+      "difficulty": "easy",
+      "season": [
+        "spring",
+        "summer",
+        "autumn",
+        "winter"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegan",
+        "dairy-free",
+        "nut-free",
+        "soy-free",
+        "vegetarian"
+      ],
+      "tags": [
+        "quick",
+        "comfort",
+        "one-pot"
+      ],
+      "ingredients": [
+        {
+          "name": "linguine or spaghetti",
+          "amount": "3/4 lb",
+          "type": "grains",
+          "kind": "pasta"
+        },
+        {
+          "name": "extra virgin olive oil",
+          "amount": "2/3 cup",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "garlic",
+          "amount": "4 cloves, thinly sliced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "fresh peperoncini",
+          "amount": "2 to 3 whole (or small dried red chiles)",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "italian parsley",
+          "amount": "1/4 cup chopped",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        }
+      ],
+      "description": "This late-night Roman staple is astonishingly full-flavored for how few ingredients it uses. Pasta Aglio, Olio e Peperoncino — garlic, oil, and chile pasta — is a minimalist masterpiece from Mark Bittman. The sauce comes together in under 10 minutes ..."
     },
     {
       "id": "pizza-salad",
@@ -3337,7 +3495,7 @@
     }
   ],
   "meta": {
-    "count": 34,
+    "count": 36,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
@@ -3358,7 +3516,8 @@
       "party",
       "quick",
       "summer",
-      "warming"
+      "warming",
+      "weeknight"
     ],
     "seasons": [
       "autumn",
