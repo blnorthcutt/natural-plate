@@ -731,6 +731,80 @@
       "description": "For a vegan hot chocolate that rivals even the creamiest dairy-laden variety, add a few tablespoons of nut butter like almond, sunflower, or peanut to the nondairy milk, chocolate chips, and cocoa powder. The nut butter adds body and richness that ma..."
     },
     {
+      "id": "honey-butter-grilled-corn",
+      "title": "Honey Butter Grilled Corn",
+      "slug": "honey-butter-grilled-corn",
+      "source": "https://cooking.nytimes.com/recipes/1023295-honey-butter-grilled-corn",
+      "image": "./recipes/images/21-honey-butter-grilled-corn.jpg",
+      "file": "./recipes/21-honey-butter-grilled-corn.md",
+      "servings": 6,
+      "prep_time": "5 min",
+      "cook_time": "15 min",
+      "total_time": "20 min, plus time for heating grill",
+      "difficulty": "easy",
+      "season": [
+        "summer"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian",
+        "gluten-free"
+      ],
+      "tags": [
+        "quick",
+        "summer",
+        "party"
+      ],
+      "ingredients": [
+        {
+          "name": "honey",
+          "amount": "3 tbsp",
+          "type": "pantry",
+          "kind": "sweetener"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "6 tbsp",
+          "type": "dairy",
+          "kind": "butter"
+        },
+        {
+          "name": "chile flakes",
+          "amount": "2 tsp, such as gochugaru (optional)",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "salt",
+          "amount": "1 tsp, plus more to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "water",
+          "amount": "1 cup, plus 1/4 cup more as needed",
+          "type": "pantry",
+          "kind": "water"
+        },
+        {
+          "name": "corn",
+          "amount": "6 ears, shucked",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "fresh parsley",
+          "amount": "small handful, minced (or chives)",
+          "type": "produce",
+          "kind": "herb"
+        }
+      ],
+      "description": "Kenji López-Alt's clever grilling technique: instead of brushing corn with butter at the end, the cobs get a char on the hot side of the grill, then a soak in a side pan of simmering honey butter that reduces into a glossy, sweet-spicy glaze. The pan..."
+    },
+    {
       "id": "lentil-sweet-potato-chili",
       "title": "Lentil & Sweet Potato Chili",
       "slug": "lentil-sweet-potato-chili",
@@ -1274,6 +1348,95 @@
       "description": "A warm, grounding breakfast that proves oats are not just for sweet. The creamy oat base is savory, creamy, and deeply savory from the miso, and the tofu scramble is a quick high-protein companion. This is a meal that sticks with you through a cold m..."
     },
     {
+      "id": "silken-tofu-with-spicy-soy-dressing",
+      "title": "Silken Tofu with Spicy Soy Dressing",
+      "slug": "silken-tofu-with-spicy-soy-dressing",
+      "source": "https://cooking.nytimes.com/recipes/1022562-silken-tofu-with-spicy-soy-dressing",
+      "image": "./recipes/images/18-silken-tofu-with-spicy-soy-dressing.jpg",
+      "file": "./recipes/18-silken-tofu-with-spicy-soy-dressing.md",
+      "servings": 4,
+      "prep_time": "5 min",
+      "cook_time": "0 min",
+      "total_time": "5 min",
+      "difficulty": "easy",
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegan",
+        "nut-free",
+        "dairy-free"
+      ],
+      "tags": [
+        "quick",
+        "no-cook",
+        "high-protein",
+        "summer"
+      ],
+      "ingredients": [
+        {
+          "name": "soy sauce",
+          "amount": "1/4 cup",
+          "type": "condiments",
+          "kind": "sauce"
+        },
+        {
+          "name": "rice vinegar",
+          "amount": "1 tbsp",
+          "type": "condiments",
+          "kind": "vinegar"
+        },
+        {
+          "name": "sesame oil",
+          "amount": "1 tbsp",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "chile oil",
+          "amount": "1 tbsp",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "toasted white sesame seeds",
+          "amount": "1 tbsp",
+          "type": "pantry",
+          "kind": "seed"
+        },
+        {
+          "name": "granulated sugar",
+          "amount": "2 tsp",
+          "type": "pantry",
+          "kind": "sweetener"
+        },
+        {
+          "name": "scallions",
+          "amount": "2, green and white parts, sliced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "silken tofu",
+          "amount": "2 blocks (14 oz each), cold",
+          "type": "legumes",
+          "kind": "tofu"
+        },
+        {
+          "name": "cilantro",
+          "amount": "1 handful, leaves",
+          "type": "produce",
+          "kind": "herb"
+        }
+      ],
+      "description": "Inspired by the many cold silken tofu dishes of East Asia — Japanese hiyayakko and Chinese liangban tofu among them — this no-cook dish drapes silky, chilled tofu in a punchy soy dressing brightened with sesame oil, chile oil, vinegar, and toasted se..."
+    },
+    {
       "id": "strawberry-pretzel-pie",
       "title": "Strawberry Pretzel Pie",
       "slug": "strawberry-pretzel-pie",
@@ -1682,7 +1845,7 @@
     }
   ],
   "meta": {
-    "count": 17,
+    "count": 19,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
