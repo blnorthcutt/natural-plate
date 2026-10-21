@@ -866,6 +866,126 @@
       "description": "For a vegan hot chocolate that rivals even the creamiest dairy-laden variety, add a few tablespoons of nut butter like almond, sunflower, or peanut to the nondairy milk, chocolate chips, and cocoa powder. The nut butter adds body and richness that ma..."
     },
     {
+      "id": "grilled-corn-and-avocado-salad-with-feta-dressing",
+      "title": "Grilled Corn and Avocado Salad With Feta Dressing",
+      "slug": "grilled-corn-and-avocado-salad-with-feta-dressing",
+      "source": "https://cooking.nytimes.com/recipes/1020403-grilled-corn-and-avocado-salad-with-feta-dressing",
+      "image": "./recipes/images/22-grilled-corn-and-avocado-salad-with-feta-dressing.jpg",
+      "file": "./recipes/22-grilled-corn-and-avocado-salad-with-feta-dressing.md",
+      "servings": 6,
+      "prep_time": "15 min",
+      "cook_time": "15 min",
+      "total_time": "30 min",
+      "difficulty": "easy",
+      "season": [
+        "summer"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free",
+        "soy-free"
+      ],
+      "tags": [
+        "quick",
+        "summer",
+        "party",
+        "no-cook",
+        "grilling"
+      ],
+      "ingredients": [
+        {
+          "name": "corn",
+          "amount": "6 ears (about 3 lb), shucked and silk removed",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "scallions",
+          "amount": "1 bunch (about 6), trimmed",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "jalapeño",
+          "amount": "1, stemmed and halved lengthwise",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "olive oil",
+          "amount": "3 tbsp",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "salt",
+          "amount": "kosher, to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "feta cheese",
+          "amount": "4 oz, crumbled (about 3/4 cup)",
+          "type": "dairy",
+          "kind": "cheese"
+        },
+        {
+          "name": "buttermilk",
+          "amount": "1/3 cup",
+          "type": "dairy",
+          "kind": "liquid"
+        },
+        {
+          "name": "lemon",
+          "amount": "1, zest grated (1 tsp) and juice (1 tbsp)",
+          "type": "produce",
+          "kind": "citrus"
+        },
+        {
+          "name": "garlic",
+          "amount": "1 small clove, grated",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "fresh chives",
+          "amount": "1/4 cup sliced",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "fresh parsley",
+          "amount": "1/4 cup finely chopped",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "romaine lettuce",
+          "amount": "1 medium head, torn into bite-size pieces (about 8 cups)",
+          "type": "produce",
+          "kind": "leafy green"
+        },
+        {
+          "name": "avocado",
+          "amount": "2, sliced",
+          "type": "produce",
+          "kind": "vegetable"
+        }
+      ],
+      "description": "This lively salad from NYT Cooking is summer on a plate: sweet grilled corn, charred scallions and jalapeño, and creamy avocado slices tossed with a tangy buttermilk-feta dressing. The sweetness of peak-summer corn and the richness of avocado balance..."
+    },
+    {
       "id": "honey-butter-grilled-corn",
       "title": "Honey Butter Grilled Corn",
       "slug": "honey-butter-grilled-corn",
@@ -2219,7 +2339,7 @@
     }
   ],
   "meta": {
-    "count": 23,
+    "count": 24,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
@@ -2229,6 +2349,7 @@
       "dessert",
       "dip",
       "freezer-friendly",
+      "grilling",
       "high-protein",
       "holiday",
       "make-ahead",
