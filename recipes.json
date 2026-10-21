@@ -2801,6 +2801,142 @@
       "description": "This no-cook corn salad from Lidey Heuck is summer in a bowl: raw sweet corn kernels tossed with blistered shishito peppers and a punchy cumin-lime vinaigrette. The peppers are quickly sautéed until tender and beginning to brown, then stirred into th..."
     },
     {
+      "id": "sticky-miso-salmon-bowl",
+      "title": "Sticky Miso Salmon Bowl",
+      "slug": "sticky-miso-salmon-bowl",
+      "source": "https://cooking.nytimes.com/recipes/1025510-sticky-miso-salmon-bowl",
+      "image": "./recipes/images/34-sticky-miso-salmon-bowl.jpg",
+      "file": "./recipes/34-sticky-miso-salmon-bowl.md",
+      "servings": 4,
+      "prep_time": "10 min",
+      "cook_time": "25 min",
+      "total_time": "35 min",
+      "difficulty": "easy",
+      "season": [
+        "spring",
+        "summer",
+        "autumn"
+      ],
+      "meal": [
+        "dinner"
+      ],
+      "dietary": [
+        "gluten-free",
+        "dairy-free",
+        "nut-free"
+      ],
+      "tags": [
+        "quick",
+        "weeknight",
+        "high-protein"
+      ],
+      "ingredients": [
+        {
+          "name": "sushi rice",
+          "amount": "2 cups",
+          "type": "grains",
+          "kind": "whole grain"
+        },
+        {
+          "name": "white miso",
+          "amount": "3 tbsp",
+          "type": "pantry",
+          "kind": "fermented"
+        },
+        {
+          "name": "honey",
+          "amount": "2 tbsp",
+          "type": "pantry",
+          "kind": "sweetener"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "1 tbsp",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "fresh ginger",
+          "amount": "1 tbsp, freshly grated",
+          "type": "produce",
+          "kind": "root vegetable"
+        },
+        {
+          "name": "grapefruit",
+          "amount": "2 tsp zest plus 1 tbsp juice",
+          "type": "produce",
+          "kind": "citrus"
+        },
+        {
+          "name": "salmon fillets",
+          "amount": "4 (6 to 8 oz each), skinless, patted dry",
+          "type": "pantry",
+          "kind": "seafood"
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "scallions",
+          "amount": "4, thinly sliced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "1 tbsp, cubed",
+          "type": "dairy",
+          "kind": "butter"
+        },
+        {
+          "name": "kimchi",
+          "amount": "for serving (optional)",
+          "type": "produce",
+          "kind": "fermented"
+        },
+        {
+          "name": "chile crisp",
+          "amount": "for serving (optional)",
+          "type": "condiments",
+          "kind": "sauce"
+        },
+        {
+          "name": "nori sheets",
+          "amount": "toasted, for serving (optional)",
+          "type": "pantry",
+          "kind": "vegetable"
+        },
+        {
+          "name": "cucumber",
+          "amount": "sliced, for serving (optional)",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "avocado",
+          "amount": "sliced, for serving (optional)",
+          "type": "produce",
+          "kind": "fruit"
+        },
+        {
+          "name": "radish",
+          "amount": "sliced, for serving (optional)",
+          "type": "produce",
+          "kind": "root vegetable"
+        }
+      ],
+      "description": "Miso salmon is an easy meal for any night of the week, but it gets taken to a whole other level here with the additions of grapefruit and honey. Combining the zest and juice from the grapefruit with honey, miso and a bit of ginger gives the fish a st..."
+    },
+    {
       "id": "strawberry-pretzel-pie",
       "title": "Strawberry Pretzel Pie",
       "slug": "strawberry-pretzel-pie",
@@ -3495,7 +3631,7 @@
     }
   ],
   "meta": {
-    "count": 36,
+    "count": 37,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
