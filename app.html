@@ -344,9 +344,12 @@
   </footer>
 
   <!-- Alpine.js -->
+  <!-- IMPORTANT: Alpine's CDN build auto-starts at readyState 'interactive'. To register
+       components reliably, app.js MUST run before Alpine starts. We load app.js as a
+       plain (non-deferred) script BEFORE the Alpine CDN script, so the 'alpine:init'
+       listener is registered first. -->
+  <script src="./app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-  <!-- App JS -->
-  <script src="./app.js" defer></script>
   <!-- Dark mode toggle -->
   <script src="./dark-mode-toggle.min.js" defer></script>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
