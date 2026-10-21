@@ -900,6 +900,93 @@
       "description": "A warm, grounding breakfast that proves oats are not just for sweet. The creamy oat base is savory, creamy, and deeply savory from the miso, and the tofu scramble is a quick high-protein companion. This is a meal that sticks with you through a cold m..."
     },
     {
+      "id": "strawberry-pretzel-pie",
+      "title": "Strawberry Pretzel Pie",
+      "slug": "strawberry-pretzel-pie",
+      "source": "https://cooking.nytimes.com/recipes/1020323-strawberry-pretzel-pie",
+      "image": "./recipes/images/13-strawberry-pretzel-pie.jpg",
+      "file": "./recipes/13-strawberry-pretzel-pie.md",
+      "servings": 8,
+      "prep_time": "20 min",
+      "cook_time": "15 min",
+      "total_time": "40 min, plus 2 hr chilling",
+      "difficulty": "medium",
+      "season": [
+        "spring",
+        "summer"
+      ],
+      "meal": [
+        "snack",
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian"
+      ],
+      "tags": [
+        "dessert",
+        "summer",
+        "party",
+        "make-ahead"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "amount": "14 tbsp (200 g), softened, plus more for greasing",
+          "type": "dairy",
+          "kind": "butter"
+        },
+        {
+          "name": "confectioners' sugar",
+          "amount": "2 cups + 2 tbsp (265 g), unsifted",
+          "type": "pantry",
+          "kind": "sweetener"
+        },
+        {
+          "name": "mini snack pretzels",
+          "amount": "3 cups (120 g), finely ground",
+          "type": "pantry",
+          "kind": "snack"
+        },
+        {
+          "name": "all-purpose flour",
+          "amount": "1 cup (130 g)",
+          "type": "grains",
+          "kind": "flour"
+        },
+        {
+          "name": "baking soda",
+          "amount": "1 tsp",
+          "type": "pantry",
+          "kind": "leavening"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "1 tsp",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "cream cheese",
+          "amount": "12 oz (340 g), at room temperature",
+          "type": "dairy",
+          "kind": "cheese"
+        },
+        {
+          "name": "heavy whipping cream",
+          "amount": "1 1/2 cups (360 ml), very cold",
+          "type": "dairy",
+          "kind": "cream"
+        },
+        {
+          "name": "fresh strawberries",
+          "amount": "1 lb (450 g), hulled and thinly sliced lengthwise",
+          "type": "produce",
+          "kind": "fruit"
+        }
+      ],
+      "description": "A salty-sweet summertime pie: a crisp, buttery pretzel crust filled with a cloud-light whipped cream cheese mousse and piled high with glossy sugared strawberries. Adapted from the NYT Cooking original, with one key change — the heavy cream is whippe..."
+    },
+    {
       "id": "super-savory-grated-tofu",
       "title": "I Can't Believe It's Not Chicken — Super Savory Grated Tofu",
       "slug": "super-savory-grated-tofu",
@@ -1221,7 +1308,7 @@
     }
   ],
   "meta": {
-    "count": 12,
+    "count": 13,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
@@ -1233,6 +1320,7 @@
       "freezer-friendly",
       "high-protein",
       "holiday",
+      "make-ahead",
       "meal-prep",
       "no-cook",
       "one-pot",
@@ -1287,10 +1375,12 @@
       "dried fruit",
       "extract",
       "fermented",
+      "flour",
       "fruit",
       "herb",
       "jam",
       "leafy green",
+      "leavening",
       "lentil",
       "liquid",
       "nut",
@@ -1304,6 +1394,7 @@
       "salt",
       "sauce",
       "seed",
+      "snack",
       "spice",
       "sweetener",
       "tofu",
