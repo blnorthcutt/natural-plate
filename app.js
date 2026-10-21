@@ -44,8 +44,8 @@ document.addEventListener('alpine:init', () => {
     // =====================================================================
     get filteredRecipes() {
       return this.recipes.filter(recipe => {
-        if (tthis.search.trim()) {
-          const q = tthis.search.toLowerCase().trim();
+        if (this.search.trim()) {
+          const q = this.search.toLowerCase().trim();
           const inTitle = recipe.title.toLowerCase().includes(q);
           const inDesc = (recipe.description || '').toLowerCase().includes(q);
           const inTags = (recipe.tags || []).some(t => t.toLowerCase().includes(q));
@@ -88,7 +88,7 @@ document.addEventListener('alpine:init', () => {
     },
 
     clearFilters() {
-      tthis.search = '';
+      this.search = '';
       this.filterSeason = [];
       this.filterMeal = [];
       this.filterDietary = [];
@@ -97,7 +97,7 @@ document.addEventListener('alpine:init', () => {
     },
 
     get hasActiveFilters() {
-      return !!(tthis.search.trim()
+      return !!(this.search.trim()
         || this.filterSeason.length
         || this.filterMeal.length
         || this.filterDietary.length
