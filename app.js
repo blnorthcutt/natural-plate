@@ -194,8 +194,9 @@ document.addEventListener('alpine:init', () => {
     },
 
     newPlan() {
-      this.currentPlanData = null;
-      this.currentPlanName = '';
+      const name = this.currentPlanName.trim() || 'My Plan';
+      this.currentPlanData = this.createEmptyPlan(name);
+      this.currentPlanName = name;
     },
 
 
