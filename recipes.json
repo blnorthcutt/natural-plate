@@ -957,6 +957,79 @@
       "description": "Pan-fried gnocchi is a faster, stovetop version of baked pasta: store-bought gnocchi browns right in the skillet — no boiling required — for crispy outsides and chewy middles. Here they're tossed with cherry tomatoes that burst into a bright sauce wi..."
     },
     {
+      "id": "cucumber-avocado-salad",
+      "title": "Cucumber-Avocado Salad",
+      "slug": "cucumber-avocado-salad",
+      "source": "https://cooking.nytimes.com/recipes/1022411-cucumber-avocado-salad",
+      "image": "./recipes/images/27-cucumber-avocado-salad.jpg",
+      "file": "./recipes/27-cucumber-avocado-salad.md",
+      "servings": 4,
+      "prep_time": "15 min",
+      "cook_time": "0 min",
+      "total_time": "15 minutes",
+      "difficulty": "easy",
+      "season": [
+        "summer"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegan",
+        "wfpb",
+        "gluten-free",
+        "nut-free",
+        "soy-free",
+        "oil-free",
+        "dairy-free"
+      ],
+      "tags": [
+        "quick",
+        "no-cook",
+        "summer"
+      ],
+      "ingredients": [
+        {
+          "name": "scallions",
+          "amount": "2, trimmed then sliced crosswise ¼-inch-thick",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "cucumbers",
+          "amount": "1 pound (such as 6 Persian or mini seedless, or 1 English)",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "avocados",
+          "amount": "2 very ripe",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "2 tbsp fresh lemon or lime juice, or unseasoned rice vinegar, plus more as needed",
+          "type": "produce",
+          "kind": "citrus"
+        },
+        {
+          "name": "red-pepper flakes",
+          "amount": "for serving",
+          "type": "pantry",
+          "kind": "spice"
+        }
+      ],
+      "description": "Crunchy cucumbers and creamy avocados are the stars of this simple five-ingredient salad from Ali Slagle. Peeling the cucumbers in alternating stripes helps them soak up seasonings while maintaining their shape. After being salted and drained, they'r..."
+    },
+    {
       "id": "grilled-corn-and-avocado-salad-with-feta-dressing",
       "title": "Grilled Corn and Avocado Salad With Feta Dressing",
       "slug": "grilled-corn-and-avocado-salad-with-feta-dressing",
@@ -2430,7 +2503,7 @@
     }
   ],
   "meta": {
-    "count": 25,
+    "count": 26,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
