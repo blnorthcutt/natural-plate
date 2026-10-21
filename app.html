@@ -251,7 +251,7 @@
       <div x-show="currentView === 'list'" x-cloak>
 
         <div x-show="currentPlanData" class="mb-2">
-          <p class="text-sm muted">Based on: <strong x-text="currentPlanData.name"></strong></p>
+          <p class="text-sm muted">Based on: <strong x-text="currentPlanData ? currentPlanData.name : ''"></strong></p>
           <div class="btn-group" style="margin-top:0.5rem">
             <button class="btn btn-sm" data-variant="primary" @click="printGroceryList()">Print</button>
             <button class="btn btn-sm" data-variant="outline" @click="copyGroceryList()">Copy</button>
@@ -290,47 +290,54 @@
       <!-- ================================================================ -->
       <!-- RECIPE DETAIL MODAL -->
       <!-- ================================================================ -->
+      <!-- x-if actually removes the subtree from the DOM when falsy, so the
+           child expressions (selectedRecipe.source, .description, .ingredients)
+           never evaluate against null. x-show alone would still evaluate them. -->
       <div class="modal-overlay" x-show="selectedRecipe" x-cloak @click.self="closeRecipe()">
         <div class="modal-content" x-show="selectedRecipe" x-transition>
-          <button class="modal-close" @click="closeRecipe()" aria-label="Close">&times;</button>
-
-          <h2 x-text="selectedRecipe.title"></h2>
-          <div class="meta-line">
-            <span x-show="selectedRecipe.total_time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:0.15rem"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span x-text="selectedRecipe.total_time"></span></span>
-            <span x-show="selectedRecipe.difficulty"><span x-text="selectedRecipe.difficulty"></span></span>
-            <span x-show="selectedRecipe.servings"><span x-text="selectedRecipe.servings"></span> servings</span>
-          </div>
-
-          <div class="meta-line">
-            <template x-for="tag in (selectedRecipe.tags || [])" :key="tag">
-              <span class="tag tag-primary" x-text="tag"></span>
-            </template>
-          </div>
-
-          <div class="meta-line" x-show="selectedRecipe.source">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:0.15rem"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            <a :href="selectedRecipe.source" target="_blank" rel="noopener" x-text="'Source: ' + selectedRecipe.source"></a>
-          </div>
-
-          <template x-if="selectedRecipe.description">
+          <template x-if="selectedRecipe">
             <div>
-              <div class="section-label">Description</div>
-              <p x-text="selectedRecipe.description"></p>
-            </div>
-          </template>
+              <button class="modal-close" @click="closeRecipe()" aria-label="Close">&times;</button>
 
-          <template x-if="selectedRecipe.ingredients && selectedRecipe.ingredients.length">
-            <div>
-              <div class="section-label">Ingredients</div>
-              <ul class="ingredients">
-                <template x-for="ing in selectedRecipe.ingredients" :key="ing.name">
-                  <li><span x-text="ing.amount"></span> <span x-text="ing.name"></span></li>
+              <h2 x-text="selectedRecipe.title"></h2>
+              <div class="meta-line">
+                <span x-show="selectedRecipe.total_time"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:0.15rem"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span x-text="selectedRecipe.total_time"></span></span>
+                <span x-show="selectedRecipe.difficulty"><span x-text="selectedRecipe.difficulty"></span></span>
+                <span x-show="selectedRecipe.servings"><span x-text="selectedRecipe.servings"></span> servings</span>
+              </div>
+
+              <div class="meta-line">
+                <template x-for="tag in (selectedRecipe.tags || [])" :key="tag">
+                  <span class="tag tag-primary" x-text="tag"></span>
                 </template>
-              </ul>
+              </div>
+
+              <div class="meta-line" x-show="selectedRecipe.source">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:0.15rem"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <a :href="selectedRecipe.source" target="_blank" rel="noopener" x-text="'Source: ' + selectedRecipe.source"></a>
+              </div>
+
+              <template x-if="selectedRecipe.description">
+                <div>
+                  <div class="section-label">Description</div>
+                  <p x-text="selectedRecipe.description"></p>
+                </div>
+              </template>
+
+              <template x-if="selectedRecipe.ingredients && selectedRecipe.ingredients.length">
+                <div>
+                  <div class="section-label">Ingredients</div>
+                  <ul class="ingredients">
+                    <template x-for="ing in selectedRecipe.ingredients" :key="ing.name">
+                      <li><span x-text="ing.amount"></span> <span x-text="ing.name"></span></li>
+                    </template>
+                  </ul>
+                </div>
+              </template>
+
+              <button class="btn btn-sm" data-variant="outline" @click="closeRecipe()">Close</button>
             </div>
           </template>
-
-          <button class="btn btn-sm" data-variant="outline" @click="closeRecipe()">Close</button>
         </div>
       </div>
 
