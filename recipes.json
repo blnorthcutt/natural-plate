@@ -2255,6 +2255,107 @@
       "description": "Inspired by the many cold silken tofu dishes of East Asia — Japanese hiyayakko and Chinese liangban tofu among them — this no-cook dish drapes silky, chilled tofu in a punchy soy dressing brightened with sesame oil, chile oil, vinegar, and toasted se..."
     },
     {
+      "id": "spicy-corn-and-shishito-salad",
+      "title": "Spicy Corn and Shishito Salad",
+      "slug": "spicy-corn-and-shishito-salad",
+      "source": "https://cooking.nytimes.com/recipes/1020414-spicy-corn-and-shishito-salad",
+      "image": "./recipes/images/30-spicy-corn-and-shishito-salad.jpg",
+      "file": "./recipes/30-spicy-corn-and-shishito-salad.md",
+      "servings": 4,
+      "prep_time": "10 min",
+      "cook_time": "5 min",
+      "total_time": "15 min",
+      "difficulty": "easy",
+      "season": [
+        "summer"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free",
+        "soy-free"
+      ],
+      "tags": [
+        "quick",
+        "summer",
+        "no-cook",
+        "party"
+      ],
+      "ingredients": [
+        {
+          "name": "olive oil",
+          "amount": "3 ½ tbsp",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "lime juice",
+          "amount": "2 tbsp fresh",
+          "type": "produce",
+          "kind": "citrus"
+        },
+        {
+          "name": "ground cumin",
+          "amount": "¼ tsp",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "red onion",
+          "amount": "⅓ cup diced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "garlic",
+          "amount": "1 clove, minced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "corn",
+          "amount": "3 cups fresh kernels (from 4 to 6 ears)",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "shishito peppers",
+          "amount": "6 oz, stemmed and cut crosswise into ¼-inch slices; or green bell peppers, stemmed and diced",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "jalapeño",
+          "amount": "1 large, seeds and ribs removed, diced",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "cotija cheese",
+          "amount": "¼ cup grated (optional), or crumbled feta",
+          "type": "dairy",
+          "kind": "cheese"
+        },
+        {
+          "name": "cilantro",
+          "amount": "¼ cup chopped fresh leaves and tender stems, plus more to taste",
+          "type": "produce",
+          "kind": "herb"
+        }
+      ],
+      "description": "This no-cook corn salad from Lidey Heuck is summer in a bowl: raw sweet corn kernels tossed with blistered shishito peppers and a punchy cumin-lime vinaigrette. The peppers are quickly sautéed until tender and beginning to brown, then stirred into th..."
+    },
+    {
       "id": "strawberry-pretzel-pie",
       "title": "Strawberry Pretzel Pie",
       "slug": "strawberry-pretzel-pie",
@@ -2832,7 +2933,7 @@
     }
   ],
   "meta": {
-    "count": 29,
+    "count": 30,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
