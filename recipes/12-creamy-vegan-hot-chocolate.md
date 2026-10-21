@@ -2,7 +2,7 @@
 title: "Creamy Vegan Hot Chocolate"
 slug: creamy-vegan-hot-chocolate
 source: "https://cooking.nytimes.com/recipes/1019960-creamy-vegan-hot-chocolate"
-image: "/recipes/images/12-vegan-hot-chocolate.jpg"
+image: "./recipes/images/12-vegan-hot-chocolate.jpg"
 servings: 2
 prep_time: "2 min"
 cook_time: "3 min"

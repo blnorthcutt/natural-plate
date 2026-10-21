@@ -46,7 +46,7 @@ Edit the YAML front matter:
 ---
 title: "My New Recipe"
 slug: my-new-recipe
-# image: "/recipes/images/my-new-recipe.jpg"  # optional
+# image: "./recipes/images/my-new-recipe.jpg"  # optional
 servings: 4
 prep_time: "15 min"
 cook_time: "30 min"

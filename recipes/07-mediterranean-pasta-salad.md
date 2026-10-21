@@ -2,7 +2,7 @@
 title: "Mediterranean Pasta Salad"
 slug: mediterranean-pasta-salad
 source: "https://www.gimmesomeoven.com/mediterranean-pasta-salad/"
-image: "/recipes/images/07-mediterranean-pasta-salad.jpg"
+image: "./recipes/images/07-mediterranean-pasta-salad.jpg"
 servings: 6
 prep_time: "15 min"
 cook_time: "10 min"

@@ -2,7 +2,7 @@
 title: "I Can't Believe It's Not Chicken — Super Savory Grated Tofu"
 slug: super-savory-grated-tofu
 source: "https://cooking.nytimes.com/recipes/1027269-i-cant-believe-its-not-chicken-super-savory-grated-tofu"
-image: "/recipes/images/09-grated-tofu.jpg"
+image: "./recipes/images/09-grated-tofu.jpg"
 servings: 2
 prep_time: "10 min"
 cook_time: "20 min"

@@ -2,7 +2,7 @@
 title: "Vegan Pesto Pasta Salad"
 slug: vegan-pesto-pasta-salad
 source: "https://cooking.nytimes.com/recipes/1025659-vegan-pesto-pasta-salad"
-image: "/recipes/images/08-vegan-pesto-pasta-salad.jpg"
+image: "./recipes/images/08-vegan-pesto-pasta-salad.jpg"
 servings: 4
 prep_time: "10 min"
 cook_time: "25 min"

@@ -2,7 +2,7 @@
 title: "Recipe Name"
 slug: recipe-name
 source: ""  # optional — URL where this recipe was adapted from (e.g. NYT Cooking, blog, etc.)
-image: "/recipes/images/recipe-name.jpg"   # optional — omit if no image
+image: "./recipes/images/recipe-name.jpg"   # optional — omit if no image
 servings: 4
 prep_time: "15 min"
 cook_time: "30 min"

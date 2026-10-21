@@ -2,7 +2,7 @@
 title: "Baked Apples with Honey and Apricot"
 slug: baked-apples-honey-apricot
 source: "https://cooking.nytimes.com/recipes/1023726-baked-apples-with-honey-and-apricot"
-image: "/recipes/images/06-baked-apples.jpg"
+image: "./recipes/images/06-baked-apples.jpg"
 servings: 6
 prep_time: "25 min"
 cook_time: "45 min"

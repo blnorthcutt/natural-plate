@@ -2,7 +2,7 @@
 title: "Vegan Queso"
 slug: vegan-queso
 source: "https://cooking.nytimes.com/recipes/1026568-vegan-queso"
-image: "/recipes/images/10-vegan-queso.jpg"
+image: "./recipes/images/10-vegan-queso.jpg"
 servings: 6
 prep_time: "5 min"
 cook_time: "25 min"

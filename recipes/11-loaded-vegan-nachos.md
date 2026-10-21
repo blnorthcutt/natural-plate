@@ -2,7 +2,7 @@
 title: "Loaded Vegan Nachos"
 slug: loaded-vegan-nachos
 source: "https://cooking.nytimes.com/recipes/1023316-loaded-vegan-nachos"
-image: "/recipes/images/11-loaded-vegan-nachos.jpg"
+image: "./recipes/images/11-loaded-vegan-nachos.jpg"
 servings: 4
 prep_time: "15 min"
 cook_time: "30 min"
