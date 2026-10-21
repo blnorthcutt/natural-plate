@@ -259,6 +259,112 @@
       "description": "A simple Southern cake-style cobbler that makes the most of ripe summer peaches — or the frozen ones hiding in the back of your freezer. All you need is a bowl, a saucepan, a baking pan and a spoon, plus about 20 minutes of hands-on time. The batter ..."
     },
     {
+      "id": "black-bean-burgers",
+      "title": "Black Bean Burgers",
+      "slug": "black-bean-burgers",
+      "source": "https://cooking.nytimes.com/recipes/12221-black-bean-burgers",
+      "image": "./recipes/images/39-black-bean-burgers.jpg",
+      "file": "./recipes/39-black-bean-burgers.md",
+      "servings": 4,
+      "prep_time": "15 min",
+      "cook_time": "10 min",
+      "total_time": "35 to 45 min",
+      "difficulty": "easy",
+      "season": [
+        "summer",
+        "winter"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegan",
+        "dairy-free"
+      ],
+      "tags": [
+        "high-protein",
+        "quick",
+        "batch-cook",
+        "freezer-friendly"
+      ],
+      "ingredients": [
+        {
+          "name": "garlic",
+          "amount": "1 tsp roughly chopped",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "cilantro",
+          "amount": "1/4 cup chopped",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "porcini mushrooms",
+          "amount": "1/4 cup dried, stemless",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "rolled oats",
+          "amount": "3/4 cup, or more if needed",
+          "type": "grains",
+          "kind": "whole grain"
+        },
+        {
+          "name": "black beans",
+          "amount": "2 cups cooked or drained canned",
+          "type": "legumes",
+          "kind": "bean"
+        },
+        {
+          "name": "smoked paprika",
+          "amount": "2 tsp (or chili powder)",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "cumin",
+          "amount": "1 tsp",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "bean-cooking liquid",
+          "amount": "as needed (or porcini soaking liquid or water)",
+          "type": "pantry",
+          "kind": "liquid"
+        },
+        {
+          "name": "soy sauce",
+          "amount": "1 tbsp",
+          "type": "condiments",
+          "kind": "sauce"
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "type": "condiments",
+          "kind": "oil"
+        }
+      ],
+      "description": "Known in some circles as McBitty's Bean Burgers, these meatless patties from Mark Bittman get deep, savory flavor from dried porcini mushrooms, smoked paprika (or chili powder) and a splash of soy sauce, with black beans and rolled oats giving them b..."
+    },
+    {
       "id": "black-bean-tacos-cabbage-slaw",
       "title": "Black Bean Tacos with Cabbage Slaw",
       "slug": "black-bean-tacos-cabbage-slaw",
@@ -2324,6 +2430,138 @@
       "description": "This NYT Cooking recipe from Ali Slagle turns tomato salad into a meal by marrying creamy beans with the briny, salty hallmarks of pasta puttanesca: tomatoes, capers, olives and garlic. Coarsely chopped pebbles of Parmesan add bursts of umami, and wh..."
     },
     {
+      "id": "ribollita",
+      "title": "Ribollita",
+      "slug": "ribollita",
+      "source": "https://cooking.nytimes.com/recipes/1016052-ribollita",
+      "image": "./recipes/images/41-ribollita.jpg",
+      "file": "./recipes/41-ribollita.md",
+      "servings": 4,
+      "prep_time": "15 min",
+      "cook_time": "35 min",
+      "total_time": "50 min",
+      "difficulty": "easy",
+      "season": [
+        "autumn",
+        "winter"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian",
+        "nut-free"
+      ],
+      "tags": [
+        "batch-cook",
+        "comfort",
+        "freezer-friendly",
+        "meal-prep",
+        "one-pot",
+        "warming"
+      ],
+      "ingredients": [
+        {
+          "name": "olive oil",
+          "amount": "5 tablespoons",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "onion",
+          "amount": "1 small, chopped",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "carrot",
+          "amount": "1, chopped",
+          "type": "produce",
+          "kind": "root vegetable"
+        },
+        {
+          "name": "celery",
+          "amount": "1 stalk, chopped",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "garlic",
+          "amount": "1 tablespoon minced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "type": "pantry",
+          "kind": "spice"
+        },
+        {
+          "name": "cannellini beans",
+          "amount": "2 cups cooked or canned",
+          "type": "legumes",
+          "kind": "bean"
+        },
+        {
+          "name": "whole peeled tomatoes",
+          "amount": "1 can (15 oz)",
+          "type": "pantry",
+          "kind": "canned vegetable"
+        },
+        {
+          "name": "vegetable stock",
+          "amount": "4 cups",
+          "type": "pantry",
+          "kind": "broth"
+        },
+        {
+          "name": "fresh rosemary",
+          "amount": "1 sprig",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "fresh thyme",
+          "amount": "1 sprig",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "kale",
+          "amount": "1 pound, chopped",
+          "type": "produce",
+          "kind": "leafy green"
+        },
+        {
+          "name": "whole-grain bread",
+          "amount": "4 large thick slices, toasted",
+          "type": "grains",
+          "kind": "bread"
+        },
+        {
+          "name": "red onion",
+          "amount": "1 small, thinly sliced",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "parmesan",
+          "amount": "1/2 cup freshly grated",
+          "type": "dairy",
+          "kind": "cheese"
+        }
+      ],
+      "description": "A classic Tuscan bread-thickened vegetable stew that's hearty enough to be a meal on its own. Ribollita means \"reboiled\" — it was originally a way to use up leftover bread and vegetables, and it only gets better the next day. This version from Mark B..."
+    },
+    {
       "id": "salmon-and-kimchi-skillet",
       "title": "Salmon and Kimchi Skillet",
       "slug": "salmon-and-kimchi-skillet",
@@ -3752,7 +3990,7 @@
     }
   ],
   "meta": {
-    "count": 38,
+    "count": 40,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
