@@ -1,6 +1,99 @@
 {
   "recipes": [
     {
+      "id": "atlantic-beach-pie",
+      "title": "Atlantic Beach Pie",
+      "slug": "atlantic-beach-pie",
+      "source": "https://cooking.nytimes.com/recipes/1019424-atlantic-beach-pie",
+      "image": "./recipes/images/14-atlantic-beach-pie.jpg",
+      "file": "./recipes/14-atlantic-beach-pie.md",
+      "servings": 8,
+      "prep_time": "20 min",
+      "cook_time": "30 min",
+      "total_time": "55 min, plus 4 hr chilling",
+      "difficulty": "easy",
+      "season": [
+        "summer"
+      ],
+      "meal": [
+        "snack",
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian"
+      ],
+      "tags": [
+        "dessert",
+        "summer",
+        "party",
+        "make-ahead",
+        "comfort"
+      ],
+      "ingredients": [
+        {
+          "name": "saltine crackers",
+          "amount": "1 ½ sleeves (about 60 crackers/200 g)",
+          "type": "pantry",
+          "kind": "snack"
+        },
+        {
+          "name": "granulated sugar",
+          "amount": "3 tbsp",
+          "type": "pantry",
+          "kind": "sweetener"
+        },
+        {
+          "name": "unsalted butter",
+          "amount": "½ cup (113 g, 1 stick), at room temperature",
+          "type": "dairy",
+          "kind": "butter"
+        },
+        {
+          "name": "egg yolks",
+          "amount": "4 large",
+          "type": "dairy",
+          "kind": "egg"
+        },
+        {
+          "name": "sweetened condensed milk",
+          "amount": "1 can (14 oz/396 g)",
+          "type": "dairy",
+          "kind": "cream"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "½ cup (120 ml), or lime juice or a mix of both",
+          "type": "produce",
+          "kind": "citrus"
+        },
+        {
+          "name": "kosher salt",
+          "amount": "pinch",
+          "type": "pantry",
+          "kind": "salt"
+        },
+        {
+          "name": "heavy cream",
+          "amount": "for whipping (optional)",
+          "type": "dairy",
+          "kind": "cream"
+        },
+        {
+          "name": "lemon",
+          "amount": "zest for garnish (optional)",
+          "type": "produce",
+          "kind": "citrus"
+        },
+        {
+          "name": "flaky sea salt",
+          "amount": "for garnish (optional)",
+          "type": "pantry",
+          "kind": "salt"
+        }
+      ],
+      "description": "This Atlantic Beach Pie is a dreamy mash-up between a key lime and lemon meringue pie — a surprisingly fast and easy dessert adapted from Bill Smith, the longtime chef at Crook's Corner in Chapel Hill, N.C. A salty-sweet saltine cracker crust cradles..."
+    },
+    {
       "id": "baked-apples-honey-apricot",
       "title": "Baked Apples with Honey and Apricot",
       "slug": "baked-apples-honey-apricot",
@@ -1308,7 +1401,7 @@
     }
   ],
   "meta": {
-    "count": 13,
+    "count": 14,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
@@ -1373,6 +1466,7 @@
       "cocoa",
       "cream",
       "dried fruit",
+      "egg",
       "extract",
       "fermented",
       "flour",
