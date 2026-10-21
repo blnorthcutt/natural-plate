@@ -1164,6 +1164,76 @@
       "description": "This recipe has more steps than your average nachos, but you'll be rewarded with a festive tray that's hearty and vegetable-packed enough for dinner. A silky vegan queso made from roasted and simmered cauliflower gets layered over crispy tortilla chi..."
     },
     {
+      "id": "magnolia-bakerys-banana-pudding",
+      "title": "Magnolia Bakery's Banana Pudding",
+      "slug": "magnolia-bakerys-banana-pudding",
+      "source": "https://cooking.nytimes.com/recipes/1023785-magnolia-bakerys-banana-pudding",
+      "image": "./recipes/images/25-magnolia-bakerys-banana-pudding.jpg",
+      "file": "./recipes/25-magnolia-bakerys-banana-pudding.md",
+      "servings": 12,
+      "prep_time": "30 min",
+      "cook_time": "0 min",
+      "total_time": "30 min, plus at least 5 hr chilling",
+      "difficulty": "easy",
+      "season": [
+        "summer"
+      ],
+      "meal": [
+        "snack",
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian"
+      ],
+      "tags": [
+        "dessert",
+        "summer",
+        "party",
+        "make-ahead",
+        "no-cook",
+        "comfort"
+      ],
+      "ingredients": [
+        {
+          "name": "sweetened condensed milk",
+          "amount": "1 can (14 oz)",
+          "type": "dairy",
+          "kind": "cream"
+        },
+        {
+          "name": "water",
+          "amount": "1 ½ cups ice-cold",
+          "type": "pantry",
+          "kind": "water"
+        },
+        {
+          "name": "instant vanilla pudding mix",
+          "amount": "1 package (3.4 oz)",
+          "type": "pantry",
+          "kind": "extract"
+        },
+        {
+          "name": "heavy cream",
+          "amount": "3 cups cold",
+          "type": "dairy",
+          "kind": "cream"
+        },
+        {
+          "name": "vanilla wafer cookies",
+          "amount": "1 box (11 oz), such as Nilla",
+          "type": "pantry",
+          "kind": "snack"
+        },
+        {
+          "name": "bananas",
+          "amount": "4 to 5 ripe, sliced",
+          "type": "produce",
+          "kind": "fruit"
+        }
+      ],
+      "description": "To many, the banana pudding at the famed New York shop Magnolia Bakery is even more iconic than the store's beloved cupcakes. Airy, creamy and delightfully reminiscent of childhood packaged snacks (thanks to instant vanilla pudding mix), this dessert..."
+    },
+    {
       "id": "mediterranean-pasta-salad",
       "title": "Mediterranean Pasta Salad",
       "slug": "mediterranean-pasta-salad",
@@ -2068,7 +2138,7 @@
     }
   ],
   "meta": {
-    "count": 21,
+    "count": 22,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
