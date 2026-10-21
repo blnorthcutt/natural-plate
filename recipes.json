@@ -1847,6 +1847,103 @@
       "description": "For pizza in salad form, this clever recipe from Sohla El-Waylly tosses a crisp and briny mix of romaine lettuce, pepperoncini, black olives, and red onion in a bright, grated tomato vinaigrette. Spicy pepperoni strips are sizzled until crisp, then t..."
     },
     {
+      "id": "puttanesca-chickpea-tomato-salad",
+      "title": "Puttanesca Chickpea-Tomato Salad",
+      "slug": "puttanesca-chickpea-tomato-salad",
+      "source": "https://cooking.nytimes.com/recipes/1023396-puttanesca-chickpea-tomato-salad",
+      "image": "./recipes/images/28-puttanesca-chickpea-tomato-salad.jpg",
+      "file": "./recipes/28-puttanesca-chickpea-tomato-salad.md",
+      "servings": 6,
+      "prep_time": "15 min",
+      "cook_time": "0 min",
+      "total_time": "15 min, plus up to 2 hr resting",
+      "difficulty": "easy",
+      "season": [
+        "summer"
+      ],
+      "meal": [
+        "lunch",
+        "dinner"
+      ],
+      "dietary": [
+        "vegetarian",
+        "gluten-free",
+        "nut-free",
+        "soy-free"
+      ],
+      "tags": [
+        "quick",
+        "no-cook",
+        "summer",
+        "high-protein",
+        "make-ahead",
+        "packable"
+      ],
+      "ingredients": [
+        {
+          "name": "tomatoes",
+          "amount": "1 1/2 lb ripe, of any size, cut into 1- or 2-bite pieces",
+          "type": "produce",
+          "kind": "vegetable"
+        },
+        {
+          "name": "chickpeas",
+          "amount": "3 cups cooked, rinsed (about two 15-ounce cans)",
+          "type": "legumes",
+          "kind": "bean"
+        },
+        {
+          "name": "parsley",
+          "amount": "1/2 cup coarsely chopped leaves and stems",
+          "type": "produce",
+          "kind": "herb"
+        },
+        {
+          "name": "parmesan",
+          "amount": "1 1/2 oz, coarsely chopped or crumbled (about 1/3 cup)",
+          "type": "dairy",
+          "kind": "cheese"
+        },
+        {
+          "name": "olive oil",
+          "amount": "1/4 cup extra-virgin",
+          "type": "condiments",
+          "kind": "oil"
+        },
+        {
+          "name": "kalamata olives",
+          "amount": "1/4 cup, torn in half and pitted",
+          "type": "condiments",
+          "kind": "pickled"
+        },
+        {
+          "name": "capers",
+          "amount": "3 tbsp drained",
+          "type": "condiments",
+          "kind": "pickled"
+        },
+        {
+          "name": "lemon juice",
+          "amount": "1 tbsp, plus more to taste",
+          "type": "produce",
+          "kind": "citrus"
+        },
+        {
+          "name": "garlic",
+          "amount": "1 small clove, finely grated",
+          "type": "produce",
+          "kind": "allium"
+        },
+        {
+          "name": "salt",
+          "amount": "kosher, to taste",
+          "type": "pantry",
+          "kind": "salt"
+        }
+      ],
+      "description": "This NYT Cooking recipe from Ali Slagle turns tomato salad into a meal by marrying creamy beans with the briny, salty hallmarks of pasta puttanesca: tomatoes, capers, olives and garlic. Coarsely chopped pebbles of Parmesan add bursts of umami, and wh..."
+    },
+    {
       "id": "savory-oat-porridge-greens-tofu-scramble",
       "title": "Savory Oat Porridge with Greens & Tofu Scramble",
       "slug": "savory-oat-porridge-greens-tofu-scramble",
@@ -2622,7 +2719,7 @@
     }
   ],
   "meta": {
-    "count": 27,
+    "count": 28,
     "generated": "natural-plate build_index.py"
   },
   "taxonomies": {
